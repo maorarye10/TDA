@@ -1,0 +1,30 @@
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.3) 33.47%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url("hero.png"), lightgray;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 107.5%;
+  background-position: 62.6% -2px;
+  filter: blur(3.6431400775909424px);
+  height: calc(100svh - 1%);
+}
+
+/* md */
+@media screen and (min-width: 768px) {
+  .background {
+    /* border: 1px solid red; */
+    background-size: 106.7%;
+    background-position: 49.7% 22%;
+    height: calc(100svh + 12%);
+  }
+}
