@@ -21,10 +21,18 @@
 
 /* md */
 @media screen and (min-width: 768px) {
+}
+/* lg */
+/* @media screen and (min-width: 1024px) {} */
+/* xl */
+@media screen and (min-width: 1280px) {
   .background {
     /* border: 1px solid red; */
     background-size: 106.7%;
     background-position: 49.7% 22%;
     height: calc(100svh + 12%);
   }
+}
+/* 2xl */
+@media screen and (min-width: 1536px) {
 }
