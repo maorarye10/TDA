@@ -14,7 +14,9 @@
   </head>
   <body>
     <!-- Hero Background-->
-    <div class="background"></div>
+    <div class="background">
+      <div class="background__img"></div>
+    </div>
     <!-- Nav Bar -->
     <header class="container header">
       <div class="header__spacer"></div>
@@ -159,7 +161,22 @@
     </div>
     <!-- Hero -->
     <section class="hero container">
+      <svg
+        class="hero__background"
+        xmlns="http://www.w3.org/2000/svg"
+        width="960"
+        height="946"
+        viewBox="0 0 960 946"
+        fill="none"
+      >
+        <path
+          opacity="0.8"
+          d="M959.633 0.568359H-0.277344V945.121H428.139L959.633 0.568359Z"
+          fill="#272829"
+        />
+      </svg>
       <div class="hero__content">
+        <span class="hero__brand-name">Tuning Detailing Accessories</span>
         <div class="hero__titles">
           <h1 class="hero__title">שיפורים לרכב בהתאמה אישית בשבילך</h1>
           <h2 class="hero__subtitle">
@@ -255,7 +272,10 @@
     </section>
 
     <!-- Place-holder -->
-    <div class="container" style="height: 2000px"></div>
+    <div
+      class="container"
+      style="height: 2000px; background-color: var(--clr-cleanblack)"
+    ></div>
 
     <script type="module" src="./src/main.js"></script>
   </body>

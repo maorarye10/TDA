@@ -5,6 +5,10 @@
   right: 0;
   bottom: 0;
   z-index: -1;
+  height: calc(100svh - 1%);
+}
+
+.background__img {
   background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.3) 33.47%,
@@ -15,21 +19,26 @@
   background-repeat: no-repeat;
   background-size: auto 107.5%;
   background-position: 62.6% -2px;
-  filter: blur(3.6431400775909424px);
-  height: calc(100svh - 1%);
+  filter: blur(0.15rem);
+  height: 100%;
 }
 
 /* md */
 @media screen and (min-width: 768px) {
+  .background__img {
+    height: 80vh;
+    background-position: 50% -4rem;
+    filter: blur(0.1rem);
+  }
 }
 /* lg */
 /* @media screen and (min-width: 1024px) {} */
 /* xl */
 @media screen and (min-width: 1280px) {
-  .background {
+  .background__img {
     /* border: 1px solid red; */
     background-size: 106.7%;
-    background-position: 49.7% 22%;
+    background-position: 47% 22%;
     height: calc(100svh + 12%);
   }
 }
