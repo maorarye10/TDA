@@ -32,7 +32,13 @@
   }
 }
 /* lg */
-/* @media screen and (min-width: 1024px) {} */
+@media screen and (min-width: 1024px) {
+  .background__img {
+    height: 90vh;
+    background-position: 50% -2rem;
+    filter: blur(0.15rem);
+  }
+}
 /* xl */
 @media screen and (min-width: 1280px) {
   .background__img {
@@ -40,8 +46,16 @@
     background-size: 106.7%;
     background-position: 47% 22%;
     height: calc(100svh + 12%);
+    filter: blur(0.2rem);
   }
 }
 /* 2xl */
 @media screen and (min-width: 1536px) {
+  .background__img {
+    /* border: 1px solid red; */
+    background-size: 100%;
+    background-position: 47% 50%;
+    height: calc(100svh + 12%);
+    filter: blur(0.2rem);
+  }
 }
