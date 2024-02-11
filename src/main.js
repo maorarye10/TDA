@@ -5,6 +5,7 @@ import "../styles/components/background.css";
 import "../styles/components/hero.css";
 import "../styles/components/mobile-nav.css";
 import "../styles/components/header.css";
+import "../styles/components/icon-bar.css";
 
 import { mobileNav } from "./utils/mobile-nav";
 

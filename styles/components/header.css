@@ -184,24 +184,24 @@
 }
 
 /* xl */
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   .header {
-    padding-left: 7rem;
-    padding-right: 7rem;
-    max-height: var(--size-8xl);
+    padding-left: calc(7rem - 5px);
+    padding-right: calc(7rem - 5px);
+    max-height: calc(var(--size-8xl) - 7px);
     /* max-height: 5.75rem; */ /* exact size */
   }
 
   .header__logo-icon {
-    width: 7.5rem;
-    height: 7.5rem;
+    width: 7rem;
+    height: 7rem;
     margin-top: var(--size-xs);
     max-height: var(--size-8xl);
   }
 
   .header__spacer {
-    width: 7.5rem;
-    height: 7.5rem;
+    width: 7rem;
+    height: 7rem;
     /* border: 1px solid red; */
   }
 
@@ -212,6 +212,7 @@
 
   .header__link {
     font-size: var(--size-2xl);
+    font-weight: 300;
   }
 
   .header__line {
@@ -221,38 +222,38 @@
 }
 
 /* 2xl */
-@media screen and (min-width: 1536px) {
+@media screen and (min-width: 2560px) {
   .header {
-    padding-left: 9rem;
-    padding-right: 9rem;
-    max-height: 119px;
+    padding-left: 12rem;
+    padding-right: 12rem;
+    max-height: calc(var(--size-10xl) - 2px);
     /* max-height: 5.75rem; */ /* exact size */
   }
 
   .header__logo-icon {
-    width: 9.6rem;
-    height: 9.6rem;
+    width: 12rem;
+    height: 12rem;
     margin-top: var(--size-sm);
     max-height: 119px;
   }
 
   .header__spacer {
-    width: 9.6rem;
-    height: 9.6rem;
+    width: 12rem;
+    height: 12rem;
     /* border: 1px solid red; */
   }
 
   .header__menu {
-    gap: var(--size-7xl);
+    gap: var(--size-8xl);
     /* gap: 2.95rem; */ /* exact size */
   }
 
   .header__link {
-    font-size: var(--size-3xl);
+    font-size: calc(var(--size-4xl) + 5px);
   }
 
   .header__line {
     border: 3px solid rgba(255, 255, 255, 0.25);
-    padding-top: 1.625rem;
+    padding-top: 2.25rem;
   }
 }
