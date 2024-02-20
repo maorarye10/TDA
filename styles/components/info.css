@@ -1,0 +1,141 @@
+.info {
+  border: 1px solid red;
+  padding-top: var(--size-4xl);
+}
+
+.info__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.info__title {
+  font-weight: bold;
+  color: var(--clr-gold);
+  font-size: var(--size-xl);
+  line-height: 100%;
+  /* border: 1px solid red; */
+}
+
+.info__subtitle-text {
+  font-weight: lighter;
+  font-size: var(--size-base);
+  line-height: 100%;
+}
+
+/* md */
+@media screen and (min-width: 768px) {
+  .info {
+    position: relative;
+    padding-top: calc(var(--size-5xl) + 3px);
+  }
+
+  .info::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid green;
+    inset: 0;
+  }
+
+  .info__content {
+    gap: var(--size-2xl);
+  }
+
+  .info__title {
+    font-size: var(--size-sm);
+  }
+
+  .info__subtitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--size-xs);
+  }
+
+  .info__subtitle-text {
+    font-size: var(--size-xs);
+  }
+}
+/* lg */
+@media screen and (min-width: 1024px) {
+  .info {
+    padding-top: calc(var(--size-7xl) - 3px);
+  }
+
+  .info::after {
+  }
+
+  .info__content {
+    gap: calc(var(--size-3xl) + 2px);
+  }
+
+  .info__title {
+    font-size: var(--size-xl);
+  }
+
+  .info__subtitle {
+    gap: var(--size-base);
+  }
+
+  .info__subtitle-text {
+    font-size: var(--size-base);
+  }
+}
+/* xl */
+@media screen and (min-width: 1440px) {
+  .info {
+    padding-top: var(--size-8xl);
+  }
+
+  .info::after {
+  }
+
+  .info__content {
+    gap: calc(var(--size-5xl) - 3px);
+  }
+
+  .info__title {
+    font-size: calc(var(--size-3xl) - 3px);
+  }
+
+  .info__subtitle {
+    gap: var(--size-xl);
+  }
+
+  .info__subtitle-text {
+    font-size: calc(var(--size-2xl) - 1.5px);
+  }
+}
+/* 2xl */
+@media screen and (min-width: 2560px) {
+  .info {
+    padding-top: calc(var(--size-10xl) + 11px);
+  }
+
+  .info::after {
+  }
+
+  .info__content {
+    gap: calc(var(--size-7xl) + 9px);
+  }
+
+  .info__title {
+    font-size: var(--size-5xl);
+  }
+
+  .info__subtitle {
+    gap: var(--size-3xl);
+  }
+
+  .info__subtitle-text {
+    font-size: calc(var(--size-4xl) + 4px);
+  }
+}
