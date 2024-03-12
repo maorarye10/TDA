@@ -1,0 +1,41 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid purple;
+}
+
+.services__title {
+  font-size: var(--size-xl);
+  font-weight: bold;
+  line-height: 100%;
+  border-bottom: 1px solid;
+  margin-bottom: var(--size-3xl);
+}
+
+.services__list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-left: 215.5px;
+  padding-right: 215.5px;
+}
+
+.services__item-card {
+  border: 1px solid green;
+  border-radius: 27px;
+  width: 215.5px;
+  height: 276px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+}
+
+.services__list-nav {
+  display: flex;
+  gap: var(--size-xl);
+}

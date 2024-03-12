@@ -1,6 +1,7 @@
 .info {
   border: 1px solid red;
   padding-top: var(--size-4xl);
+  padding-bottom: calc(var(--size-5xl) - 5px);
 }
 
 .info__content {
