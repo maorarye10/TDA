@@ -10,5 +10,7 @@ import "../styles/components/info.css";
 import "../styles/components/services.css";
 
 import { mobileNav } from "./utils/mobile-nav";
+import { servicesNav } from "./utils/services-nav";
 
 mobileNav();
+servicesNav();
