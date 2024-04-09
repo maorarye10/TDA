@@ -151,6 +151,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: var(--size-3xl);
+  margin-bottom: calc(var(--size-base) + 1.5px);
   opacity: 50%;
 }
 

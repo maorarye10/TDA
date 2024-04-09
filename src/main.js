@@ -8,9 +8,12 @@ import "../styles/components/header.css";
 import "../styles/components/icon-bar.css";
 import "../styles/components/info.css";
 import "../styles/components/services.css";
+import "../styles/components/gallery.css";
 
 import { mobileNav } from "./utils/mobile-nav";
 import { servicesNav } from "./utils/services-nav";
+import { galleryMobile } from "./utils/gallery";
 
 mobileNav();
 servicesNav();
+galleryMobile();
