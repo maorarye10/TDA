@@ -50,7 +50,7 @@
     display: flex;
     gap: var(--size-sm);
     padding-left: 33px;
-    padding-right: 33px;
+    padding-right: 34px;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 }
