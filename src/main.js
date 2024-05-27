@@ -12,8 +12,8 @@ import "../styles/components/gallery.css";
 
 import { mobileNav } from "./utils/mobile-nav";
 import { servicesNav } from "./utils/services-nav";
-import { galleryMobile } from "./utils/gallery";
+import { gallery } from "./utils/gallery";
 
 mobileNav();
 servicesNav();
-galleryMobile();
+gallery();

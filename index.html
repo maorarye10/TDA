@@ -369,7 +369,16 @@
     <section class="gallery container">
       <h1 class="gallery__title">גלרית עבודות</h1>
       <div class="gallery__content">
-        <img class="gallery__photo-selected" src="/Pictures/wheel1.jpg" alt="selected gallery photo" />
+        <button class="gallery__btn-left">
+          <img class="gallery__btn-left-img" src="/SVG/arrow_left.svg" alt="arrow left svg" />
+        </button>
+        <div class="gallery__photo-selected-content">
+          <img class="gallery__photo-selected" src="/Pictures/wheel1.jpg" alt="selected gallery photo" />
+          <div class="gallery__photo-info">
+            <a class="gallery__photo-btn" href="">להזמנה</a>
+            <h4 class="gallery__photo-title">כיסוי להגה</h4>
+          </div>
+        </div>
         <div class="gallery__photo-list">
           <img class="gallery__photo" src="/Pictures/wheel1.jpg" alt="gallery photo" />
           <img class="gallery__photo" src="/Pictures/wheel2.jpg" alt="gallery photo" />
@@ -383,6 +392,9 @@
           <img class="gallery__photo" src="/Pictures/wheel10.jpg" alt="gallery photo" />
           <img class="gallery__photo" src="/Pictures/headlight1.jpg" alt="gallery photo" />
         </div>
+        <button class="gallery__btn-right">
+          <img class="gallery__btn-right-img" src="/SVG/arrow_right.svg" alt="arrow left svg" />
+        </button>
       </div>
     </section>
 
