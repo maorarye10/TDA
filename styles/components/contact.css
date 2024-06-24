@@ -1,0 +1,38 @@
+.contact {
+    border: 1px solid red;
+    margin-top: var(--size-5xl);
+}
+
+.contact__title-container {
+    background-image: url("/SVG/triangle.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 140px;
+    border: 1px solid purple;
+}
+
+.contact__title {
+    text-align: center;
+    padding-top: calc(var(--size-5xl) + 2px);
+    font-size: var(--size-xl);
+}
+
+.contact__form {
+    border: 1px solid green;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__submit {
+    color: black;
+    background-image: linear-gradient(to right,#FFBF00 0%, #FFC518 20%, #FFCF40 40%, #FFDC73 61%, #BF9B30 82%, #A67C00 100%);
+    width: 86.5px;
+    height: 24px;
+    border-radius: 4.5px;
+    font-weight: 600;
+    font-size: 13px;
+    box-shadow: 0 1px 4px rgba(255, 191, 0, 0.5), 0 0 100px -10px var(--clr-goldgrad100);
+}
