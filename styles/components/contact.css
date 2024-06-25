@@ -35,19 +35,60 @@
     width: 100%;
     height: 27px;
     color: white;
-    margin-top: 0;
+    padding: 0;
     padding-right: 15.5px;
+    position: relative;
+    font-size: 11px;
 }
 
 .contact__input::placeholder {
     /* border: 1px solid red; */
     color: var(--clr-gold);
     font-size: 11px;
-    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 25%;
+    width: 95%;
+    /* height: 100%; */
 }
 
 .contact__input:focus {
     outline: none;
+}
+.contact__input:focus::placeholder {
+    visibility: hidden;
+}
+
+.contact__select {
+    background-color: var(--clr-cleanblack);
+    border: none;
+    /* border-bottom: 1px solid var(--clr-softwhite); */
+    width: 100%;
+    height: 100%;
+    color: var(--clr-gold);
+    padding-right: 14px;
+    font-size: 11px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.contact__select:focus {
+    outline: none;
+}
+
+.contact__select-wraper {
+    border-bottom: 1px solid var(--clr-softwhite);
+    height: 27px;
+    width: 100%;
+    position: relative;
+}
+.contact__select-wraper::after {
+    content: "▼";
+    top: 0;
+    left: 14px;
+    position: absolute;
+    font-size: 11px;
+    color: var(--clr-gold);
+    pointer-events: none;
 }
 
 .contact__submit {
