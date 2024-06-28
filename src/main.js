@@ -10,6 +10,8 @@ import "../styles/components/info.css";
 import "../styles/components/services.css";
 import "../styles/components/gallery.css";
 import "../styles/components/contact.css";
+import "../styles/components/reviews.css";
+import "../styles/components/footer.css";
 
 import { mobileNav } from "./utils/mobile-nav";
 import { servicesNav } from "./utils/services-nav";
