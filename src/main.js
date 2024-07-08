@@ -9,6 +9,7 @@ import "../styles/components/icon-bar.css";
 import "../styles/components/info.css";
 import "../styles/components/services.css";
 import "../styles/components/gallery.css";
+import "../styles/components/contactAndReviews.css";
 import "../styles/components/contact.css";
 import "../styles/components/reviews.css";
 import "../styles/components/footer.css";

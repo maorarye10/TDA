@@ -3,4 +3,39 @@
     width: 100%;
     height: 40.5px;
     margin-top: 97px;
+    padding: 0 19px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.footer::after {
+    position: absolute;
+    content: url("/SVG/arrow_up.svg");
+    top: 17%;
+    left: 48%;
+}
+
+.footer__logo {
+    width: 42px;
+    height: 24px;
+}
+
+.footer__phone-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 109px;
+}
+
+.footer__phone {
+    font-size: 12px;
+}
+
+.footer__phone-svg {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    align-self: self-start;
 }
