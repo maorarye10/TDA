@@ -99,9 +99,7 @@
     }
     
     .reviews__list-nav > li {
-        content: "•";
         font-size: var(--size-lg);
-        transition: color 0.5s;
     }
     
     .selected {
