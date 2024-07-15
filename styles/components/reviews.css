@@ -1,5 +1,5 @@
 .reviews {
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
 }
 
 .reviews__container {
@@ -61,10 +61,12 @@
     .reviews {
         display: flex;
         flex-direction: row-reverse;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         gap: 28px;
-        padding: 0 59px;
+        padding: 0;
+        max-width: 262px;
+        margin: 0 59px 0 0;
     }
     
     .reviews__desktop {
@@ -79,7 +81,7 @@
     
     .reviews__container {
         margin-top: 0;
-        gap: 30px;
+        gap: 24px;
     }
     
     .reviews__title {

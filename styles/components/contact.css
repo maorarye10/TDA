@@ -119,8 +119,7 @@
 /* md */
 @media screen and (min-width: 768px) {
     .contact {
-        margin-top: 0;
-        margin: 0 59px;
+        margin: 0 0 0 59px;
         padding: 0;
         background-color: var(--clr-cleanblack);
         border-radius: calc(var(--size-xxs) - 1.5px);
