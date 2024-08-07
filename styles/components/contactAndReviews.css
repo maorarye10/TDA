@@ -1,4 +1,3 @@
-/* md */
 @media screen and (min-width: 768px) {
     .contactAndReviews {
         /* border: 1px solid purple; */
@@ -20,11 +19,11 @@
         z-index: -1;
     }
 
-    .contactAndReviews::before {
+    /* .contactAndReviews::before {
         content: "";
         position: absolute;
         background-image: url("/SVG/diamond.svg");
-        background-position: 50% 95%;
+        background-position: bottom;
         background-size: cover;
         background-repeat: no-repeat;
         top: 0;
@@ -32,10 +31,16 @@
         width: 100%;
         height: 100%;
         z-index: -2;
-    }
+    } */
 }
 /* lg */
-/* @media screen and (min-width: 1024px) {} */
+@media screen and (min-width: 1024px) {
+    .contactAndReviews::after {
+        top: 8%;
+        height: 219.5px;
+        /* border: 1px solid red; */
+    }
+}
 /* xl */
 /* @media screen and (min-width: 1440px) {} */
 /* 2xl */
