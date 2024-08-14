@@ -36,7 +36,7 @@
 /* lg */
 @media screen and (min-width: 1024px) {
     .contactAndReviews::after {
-        top: 8%;
+        top: calc(50% - (219.5px / 2));
         height: 219.5px;
         /* border: 1px solid red; */
     }

@@ -190,11 +190,82 @@
         height: 17.5px;
         border-radius: 2.5px;
         font-size: 10px;
+        margin-bottom: 15px;
         box-shadow: 0 1px 2px rgba(255, 191, 0, 0.5), 0 0 100px -10px var(--clr-goldgrad100);
     }
 }
 /* lg */
-/* @media screen and (min-width: 1024px) {} */
+@media screen and (min-width: 1024px) {
+    .contact {
+        margin-left: 82px;
+        border-radius: calc(var(--size-xxs) + 0.5px);
+        box-shadow: 0px 0px 2.4px 0.6px rgba(0, 0, 0, 25%), 0px 2.4px 2.4px 0px rgba(0, 0, 0, 25%);
+        max-width: 359px;
+    }
+    
+    .contact__title-container {
+        margin-top: calc(var(--size-3xl) + 1.5px);
+    }
+    
+    .contact__title {
+        font-size: var(--size-2xl);
+    }
+    
+    .contact__form {
+        margin-top: calc(var(--size-3xl) + 1.5px);
+        gap: calc(var(--size-3xl) - 2.5px);
+    }
+    
+    .contact__input {
+        height: calc(var(--size-2xl) + 2px);
+        padding-right: 5%;
+        font-size: calc(var(--size-xs) - 1px);
+        border-top-right-radius: calc(var(--size-xxs) - 2px);
+        border-top-left-radius: calc(var(--size-xxs) - 2px);
+    }
+    
+    .contact__input::placeholder {
+        /* border: 1px solid red; */
+        font-size: calc(var(--size-xs) - 1px);
+        width: 94.5%;
+        /* height: 100%; */
+    }
+
+    .contact__select {
+        padding-right: 5%;
+        font-size: calc(var(--size-xs) - 1px);
+        border-top-right-radius: calc(var(--size-xxs) - 2px);
+        border-top-left-radius: calc(var(--size-xxs) - 2px);
+    }
+    
+    .contact__select-wraper {
+        /* border-bottom: 1px solid var(--clr-softwhite); */
+        height: calc(var(--size-2xl) + 2px);
+    }
+    .contact__select-wraper::after {
+        top: 0%;
+        left: 4%;
+        font-size: calc(var(--size-xxs) + 3px);
+    }
+    
+    .contact__submit {
+        width: 84px;
+        height: 23.5px;
+        border-radius: 4.25px;
+        font-size: calc(var(--size-xs) + 1px);
+        margin-bottom: calc(var(--size-2xl));
+    }
+
+    .contact__submit > span {
+        text-shadow: 0 1.75px 1.75px rgba(0, 0, 0, 0.25);
+    }
+    
+    .contact__submit > img {
+        padding-top: 2px;
+        padding-right: 3px;
+        width: 15px;
+    }
+}
 /* xl */
 /* @media screen and (min-width: 1440px) {} */
 /* 2xl */

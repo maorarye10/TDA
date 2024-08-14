@@ -103,13 +103,41 @@
     .reviews__list-nav > li {
         font-size: var(--size-lg);
     }
-    
-    .selected {
-      color: var(--clr-goldgrad100);
-    }
 }
 /* lg */
-/* @media screen and (min-width: 1024px) {} */
+@media screen and (min-width: 1024px) {
+    .reviews {
+        gap: 0px;
+        max-width: 350px;
+        margin-right: 82px;
+    }
+    
+    .reviews__desktop {
+        width: 161px;
+        height: 329px;
+    }
+    
+    .reviews__container {
+        gap: 40px;
+    }
+    
+    .reviews__title {
+        font-size: 19px;
+    }
+    
+    .reviews__subtitle {
+        font-size: var(--size-base);
+        max-width: 144px;
+    }
+    
+    .reviews__list-nav {
+        gap: var(--size-base);
+    }
+    
+    .reviews__list-nav > li {
+        font-size: var(--size-2xl);
+    }
+}
 /* xl */
 /* @media screen and (min-width: 1440px) {} */
 /* 2xl */
