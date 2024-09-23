@@ -486,9 +486,8 @@
 }
 
 /* 2xl */
-@media screen and (min-width: 2560px) {
+/* @media screen and (min-width: 2560px) {
   .hero {
-    /* border: 1px solid red; */
     height: calc(2560px / 2.05);
   }
   .hero__brand-name {
@@ -507,7 +506,6 @@
   .hero__title {
     font-size: 80px;
     line-height: calc(var(--size-8xl) - 2px);
-    /* line-height: var(--size-6xl); */
   }
 
   .hero__subtitle {
@@ -542,12 +540,10 @@
   }
 
   .hero__contact-item {
-    /* border: 1px solid greenyellow; */
     gap: 18px;
   }
 
   .hero__contact-item > svg {
-    /* border: 1px solid red; */
     height: 38px;
     width: 38px;
   }
@@ -555,4 +551,4 @@
   .hero__contact-text {
     font-size: 30px;
   }
-}
+} */

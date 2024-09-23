@@ -267,6 +267,78 @@
     }
 }
 /* xl */
-/* @media screen and (min-width: 1440px) {} */
+@media screen and (min-width: 1440px) {
+    .contact {
+        margin-left: 115px;
+        border-radius: var(--size-xs);
+        box-shadow: 0px 0px 3.3px 0.8px rgba(0, 0, 0, 25%), 0px 3.3px 3.3px 0px rgba(0, 0, 0, 25%);
+        max-width: 505px;
+    }
+    
+    .contact__title-container {
+        margin-top: calc(var(--size-5xl) - 3.5px);
+    }
+    
+    .contact__title {
+        font-size: calc(var(--size-4xl) - 2px);
+    }
+    
+    .contact__form {
+        margin-top: calc(var(--size-5xl) - 3.5px);
+        gap: calc(var(--size-4xl) + 2.5px);
+    }
+    
+    .contact__input {
+        height: calc(var(--size-4xl) + 1px);
+        padding-right: 5%;
+        font-size: calc(var(--size-sm) + 1.5px);
+        border-top-right-radius: calc(var(--size-xs) - 2px);
+        border-top-left-radius: calc(var(--size-xs) - 2px);
+    }
+    
+    .contact__input::placeholder {
+        /* border: 1px solid red; */
+        font-size: calc(var(--size-sm) + 1.5px);
+        width: 94.5%;
+        /* height: 100%; */
+    }
+
+    .contact__select {
+        padding-right: 5%;
+        font-size: calc(var(--size-sm) + 1.5px);
+        border-top-right-radius: calc(var(--size-xs) - 2px);
+        border-top-left-radius: calc(var(--size-xs) - 2px);
+    }
+    
+    .contact__select-wraper {
+        /* border-bottom: 1px solid var(--clr-softwhite); */
+        height: calc(var(--size-4xl) + 1px);
+    }
+    .contact__select-wraper::after {
+        top: 18%;
+        left: 4%;
+        font-size: calc(var(--size-xs) + 3px);
+    }
+    
+    .contact__submit {
+        width: 118.5px;
+        height: 33px;
+        border-radius: 6px;
+        font-size: calc(var(--size-base) + 2px);
+        margin-bottom: calc(var(--size-4xl));
+        box-shadow: 0 1px 4px rgba(255, 191, 0, 0.5);
+    }
+
+    .contact__submit > span {
+        text-shadow: 0 2.4px 2.4px rgba(0, 0, 0, 0.25);
+    }
+    
+    .contact__submit > img {
+        padding-top: 1px;
+        padding-right: 0px;
+        margin-right: 3px;
+        width: 16px;
+    }
+}
 /* 2xl */
 /* @media screen and (min-width: 2560px) {} */

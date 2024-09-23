@@ -125,7 +125,7 @@
 }
 
 /* 2xl */
-@media screen and (min-width: 2560px) {
+/* @media screen and (min-width: 2560px) {
   .icon-bar {
     height: calc(11rem - 2px);
   }
@@ -150,4 +150,4 @@
   .icon-bar__text {
     font-size: calc(var(--size-3xl) - 2px);
   }
-}
+} */

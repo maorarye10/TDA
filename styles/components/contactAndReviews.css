@@ -37,11 +37,17 @@
 @media screen and (min-width: 1024px) {
     .contactAndReviews::after {
         top: calc(50% - (219.5px / 2));
-        height: 219.5px;
+        height: 219.75px;
         /* border: 1px solid red; */
     }
 }
 /* xl */
-/* @media screen and (min-width: 1440px) {} */
+@media screen and (min-width: 1440px) {
+    .contactAndReviews::after {
+        top: calc(50% - (308.75px / 2));
+        height: 308.75px;
+        /* border: 1px solid red; */
+    }
+}
 /* 2xl */
 /* @media screen and (min-width: 2560px) {} */

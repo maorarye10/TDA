@@ -23,19 +23,19 @@
       <nav>
         <ul class="header__menu">
           <li>
-            <a class="header__link" href="">צור קשר</a>
+            <a class="header__link" href="#contact">צור קשר</a>
           </li>
           <li class="header__line"></li>
           <li>
-            <a class="header__link" href="">גלריה</a>
+            <a class="header__link" href="#gallery">גלריה</a>
           </li>
           <li class="header__line"></li>
           <li>
-            <a class="header__link" href="">שירותים</a>
+            <a class="header__link" href="#services">שירותים</a>
           </li>
           <li class="header__line"></li>
           <li>
-            <a class="header__link" href="">מידע</a>
+            <a class="header__link" href="#info">מידע</a>
           </li>
         </ul>
         <button class="header__bars">
@@ -144,16 +144,16 @@
         <nav>
           <ul class="mobile-nav__menu">
             <li>
-              <a class="mobile-nav__link" href="">מידע</a>
+              <a class="mobile-nav__link" href="#info">מידע</a>
             </li>
             <li>
-              <a class="mobile-nav__link" href="">שירותים</a>
+              <a class="mobile-nav__link" href="#services">שירותים</a>
             </li>
             <li>
-              <a class="mobile-nav__link" href="">גלריה</a>
+              <a class="mobile-nav__link" href="#gallery">גלריה</a>
             </li>
             <li>
-              <a class="mobile-nav__link" href="">צור קשר</a>
+              <a class="mobile-nav__link" href="#contact">צור קשר</a>
             </li>
           </ul>
         </nav>
@@ -234,7 +234,7 @@
             </svg>
           </div>
           <div class="hero__contact-item">
-            <span class="hero__contact-text">קיש 4, תל אביב, ישראל</span>
+            <span class="hero__contact-text">אמזלג 7, ראשון לציון, ישראל</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"
@@ -302,7 +302,7 @@
     </section>
 
     <!-- Info -->
-    <section class="info container">
+    <section id="info" class="info container">
       <!-- <img class="info__svg" src="/SVG/info.svg" alt="background svg" /> -->
       <div class="info__content" dir="rtl">
         <h1 class="info__title">אנחנו לא מוסך !</h1>
@@ -322,46 +322,36 @@
       </div>
     </section>
 
+    <div class="lowerBackground">
     <!-- Services -->
-    <section class="services container">
+    <section id="services" class="services container">
       <h1 class="services__title">השירותים שלנו</h1>
       <div class="services__list">
         <div id="-1" class="services__item-placeholder"></div>
         <div id="0" class="services__card">
-          <img class="services__card-img border__green-lime" src="/SVG/wheel.svg" alt="wheel svg"></im>
-          <h3 class="services__card-title">כיסויים להגה</h3>
+          <div class="services__card-line background__yellow-purple"></div>
+          <img class="services__card-img" src="/SVG/wheel1.svg" alt="wheel svg"></im>
+          <h3 class="services__card-title">כיסויים אוניברסלים בתפירה</h3>
           <h4 class="services__card-summary">כיסויים אוניברלסים ותואמי מקור עם אפשרות להתאמה אישית, מוסיפים קלאס ושומרים על איכות ההגה</h4>
-          <a class="services__card-btn" href="">להזמנת כיסוי</a>
+          <a class="services__card-btn" href="">להזמנת כיסוי אוניברסלי</a>
         </div>
         <div id="1" class="services__card">
-          <img class="services__card-img border__orange-blue" src="/SVG/headlight.svg" alt="headlight svg"></im>
-          <h3 class="services__card-title">פנסים ונורות</h3>
-          <h4 class="services__card-summary">נורת טורבו איכותיים לכל סוגי הרכבים בהתקנה מדוייקת</h4>
-          <a class="services__card-btn" href="">להחלפת נורות</a>
+          <div class="services__card-line background__lime-green"></div>
+          <img class="services__card-img" src="/SVG/wheel2.svg" alt="headlight svg"></im>
+          <h3 class="services__card-title">כיסויים תואם מקור בתפירה</h3>
+          <h4 class="services__card-summary">כיסוי תואם מקור בהתאמה אישית לרכב, הכיסוי נבנה לפי בקשת הלקוח בהתאמה לעיצוב פנים הרכב ויושב כמו כיסוי מקורי שהגיע עם הרכב</h4>
+          <a class="services__card-btn" href="">להזמנת כיסוי תואם מקור</a>
         </div>
         <div id="2" class="services__card">
-          <img class="services__card-img border__yellow-pink" src="/SVG/toolkit.svg" alt="toolkit svg"></im>
-          <h3 class="services__card-title">קיטים לרכב</h3>
-          <h4 class="services__card-summary">קיטים הכוללים ספוילרים, חצאיות וליפים לכל סוגי הרכב בהתקנה במקום</h4>
-          <a class="services__card-btn" href="">להזמנת קיט</a>
+          <div class="services__card-line background__blue-orange"></div>
+          <img class="services__card-img" src="/SVG/wheel3.svg" alt="toolkit svg"></im>
+          <h3 class="services__card-title">קורס כיסויים להגה</h3>
+          <h4 class="services__card-summary">הקורס הדיגיטלי הראשון והיחיד בארץ שבוא נלמד מה הוא כיסוי הגה, סוגי הכיסויים הקיימים, סוגי החומרים, ושלבי ביצוע העבודה עד לתוצאה מושלמת</h4>
+          <a class="services__card-btn" href="">לרכישת הקורס</a>
         </div>
-        <div id="3" class="services__card">
-          <img class="services__card-img border__purple-yellow" src="/SVG/paintbrush.svg" alt="paint-brush svg"></im>
-          <h3 class="services__card-title">שחזור צבע לרכב</h3>
-          <h4 class="services__card-summary">שחזור צבע לכל רכב הכולל פוליש, ואקס ונאנו</h4>
-          <a class="services__card-btn" href="">לשחזור צבע</a>
-        </div>
-        <div id="4" class="services__card">
-          <img class="services__card-img border__red-yellow" src="/SVG/sticker.svg" alt="sticker svg"></im>
-          <h3 class="services__card-title">ציפויים</h3>
-          <h4 class="services__card-summary">ציפוי הכנה איכותי ששומר על בריאות הצבע ברכב, וציפוי הגנה לפנסים</h4>
-          <a class="services__card-btn" href="">להזמנת ציפוי</a>
-        </div>
-        <div id="5" class="services__item-placeholder"></div>
+        <div id="3" class="services__item-placeholder"></div>
       </div>
       <ul class="services__list-nav">
-        <li></li>
-        <li></li>
         <li></li>
         <li></li>
         <li></li>
@@ -370,7 +360,7 @@
     </section>
 
     <!-- Gallery -->
-    <section class="gallery container">
+    <section id="gallery" class="gallery container">
       <h1 class="gallery__title">גלרית עבודות</h1>
       <div class="gallery__content">
         <button class="gallery__btn-left">
@@ -406,11 +396,11 @@
     <section class="contactAndReviews container" style="padding: 0;">
       
       <!-- Contact Us -->
-      <section class="contact container">
+      <section id="contact" class="contact container">
         <div class="contact__title-container">
           <h1 class="contact__title">צור קשר</h1>
         </div>
-        <form class="contact__form" action="">
+        <form class="contact__form">
           <input class="contact__input" type="text" placeholder="שם מלא" dir="rtl">
           <div class="contact__select-wraper">
             <select class="contact__select" name="type" id="type" dir="rtl">
@@ -436,12 +426,25 @@
         <div class="reviews__container">
           <h1 class="reviews__title">מה אומרים עלינו ?</h1>
           <p class="reviews__subtitle">קראו את הביקורות מפי הלקוחות היקרים שלנו :)</p>
-          <div class="reviews__placeholder">
+          <div class="reviews__list">
+            <video id="0" class="reviews__video" controls>
+              <source src="/Videos/review1.mov">
+            </video>
             
+            <video id="1" class="reviews__video" controls>
+              <source src="/Videos/review2.mov">
+            </video>
+            
+            <video id="2" class="reviews__video" controls>
+              <source src="/Videos/review4.mov">
+            </video>
+            
+            <video id="3" class="reviews__video" controls>
+              <source src="/Videos/review5.mov">
+            </video>
           </div>
           <ul class="reviews__list-nav">
             <li class="selected"></li>
-            <li></li>
             <li></li>
             <li></li>
             <li></li>
@@ -451,6 +454,9 @@
       </section>
     
     </section>
+    
+
+  </div>
 
     <!-- Footer -->
     <footer class="container footer">

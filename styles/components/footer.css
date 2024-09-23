@@ -12,9 +12,14 @@
 
 .footer::after {
     position: absolute;
-    content: url("/SVG/arrow_up.svg");
-    top: 17%;
-    left: 48%;
+    content: "";
+    background-image: url("/SVG/arrow_up.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
 }
 
 .footer__logo {
@@ -39,3 +44,102 @@
     height: 18px;
     align-self: self-start;
 }
+
+/* md */
+@media screen and (min-width: 768px) {
+    .footer {
+        height: 51px;
+        margin-top: 81px;
+        padding: 0 57.5px;
+    }
+    
+    .footer::after {
+        background-size: 3%;
+    }
+    
+    .footer__logo {
+        width: 60px;
+        height: 34px;
+    }
+    
+    .footer__phone-container {
+        width: 96px;
+        justify-content: flex-end;
+        gap: 5.5px;
+    }
+    
+    .footer__phone {
+        font-size: 10px;
+    }
+    
+    .footer__phone-svg {
+        width: 15px;
+        height: 15px;
+    }
+}
+/* lg */
+@media screen and (min-width: 1024px) {
+    .footer {
+        height: 68px;
+        margin-top: 108px;
+        padding: 0 77px;
+    }
+    
+    .footer::after {
+        background-size: 2.75%;
+    }
+    
+    .footer__logo {
+        width: 82px;
+        height: 46px;
+        margin-top: 2.5px;
+    }
+    
+    .footer__phone-container {
+        width: 128px;
+        gap: 7.5px;
+    }
+    
+    .footer__phone {
+        font-size: 13.5px;
+    }
+    
+    .footer__phone-svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+/* xl */
+@media screen and (min-width: 1440px) {
+    .footer {
+        height: 95px;
+        margin-top: 152px;
+        padding: 0 108px;
+    }
+    
+    .footer::after {
+        background-size: 46px 24px;
+    }
+    
+    .footer__logo {
+        width: 117px;
+        height: 63px;
+        margin-top: 2.5px;
+    }
+    
+    .footer__phone-container {
+        width: 180px;
+        gap: 10.5px;
+    }
+    
+    .footer__phone {
+        font-size: 19px;
+    }
+    
+    .footer__phone-svg {
+        width: 27px;
+        height: 27px;
+    }
+}
+/* 2xl */
+/* @media screen and (min-width: 2560px) {} */

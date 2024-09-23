@@ -13,11 +13,15 @@ import "../styles/components/contactAndReviews.css";
 import "../styles/components/contact.css";
 import "../styles/components/reviews.css";
 import "../styles/components/footer.css";
+import "../styles/components/lowerBackground.css";
+
 
 import { mobileNav } from "./utils/mobile-nav";
 import { servicesNav } from "./utils/services-nav";
 import { gallery } from "./utils/gallery";
+import { reviews } from "./utils/reviews";
 
 mobileNav();
 servicesNav();
 gallery();
+reviews();

@@ -88,10 +88,10 @@
     height: calc(100svh + 12%);
     filter: blur(0.2rem);
   } */
-  .background {
+  /* .background {
     height: calc(2560px / 2.05 + calc(var(--size-10xl) - 2px));
   }
   .background__img {
     filter: blur(0.15rem);
-  }
+  } */
 }
