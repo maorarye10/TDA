@@ -7,6 +7,9 @@
 .disable {
     filter: grayscale(100%);
 }
+.selected-pic {
+    border: 2px solid var(--clr-goldgrad100);
+}
 
 .gallery {
     /* border: 1px solid red; */

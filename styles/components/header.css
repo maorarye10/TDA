@@ -1,3 +1,18 @@
+.sticky {
+  position: sticky;
+  top: 0;
+  transform: translate(0, -200px);
+}
+.bring-to-view {
+  transform: translate(0, 0);
+  transition: all 0.3s ease;
+  background-color: var(--clr-cleanblack);
+}
+.hide-from-view {
+  transform: translate(0, -200px);
+  transition: all 0.3s ease;
+}
+
 .header {
   /* border: 1px red solid; */
   max-height: 119px;
@@ -8,6 +23,7 @@
   background-color: var(--clr-cleanblack);
   padding-left: var(--size-4xl);
   padding-right: var(--size-4xl);
+  z-index: 999;
 }
 
 .header__spacer {

@@ -1,14 +1,23 @@
 export const gallery = () => {
-    const selectedPic = document.querySelector('.gallery__photo-selected');
+    const displayedPic = document.querySelector('.gallery__photo-selected');
+    let selectedPic = document.querySelector('.gallery__photo.selected-pic');
     const pics = document.querySelectorAll('.gallery__photo');
     const btnBack = document.querySelector('.gallery__btn-left');
     const btnForward = document.querySelector('.gallery__btn-right');
+    const btnOrder = document.querySelector('.gallery__photo-btn');
+    const displayedPicTitle = document.querySelector('.gallery__photo-title');
+    const contactSection = document.querySelector('.contact');
+    const serviceDDL = document.querySelector(".contact__select");
     let pointer = 0;
     let lastBtnPressed = 0; // 0 = backward, 1 = forward
 
     const onPicClick = (event, index, arrLength) => {
         const clickedPic = event.target;
-        selectedPic.src = clickedPic.src;
+        selectedPic.classList.remove("selected-pic");
+        clickedPic.classList.add("selected-pic");
+        displayedPic.src = clickedPic.src;
+        displayedPicTitle.innerText = clickedPic.dataset.service;
+        selectedPic = clickedPic;
 
         /* if (index > 0 && index < arrLength - 1) {
             clickedPic.scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"});
@@ -42,9 +51,18 @@ export const gallery = () => {
         lastBtnPressed = 0;
     }
 
+    const onOrderBtnClick = (event) => {
+        event.preventDefault();
+        serviceDDL.value = selectedPic.dataset.value;
+        contactSection.scrollIntoView({behavior: "smooth", block: "center"});
+    }
+
     pics.forEach((photo, index, photos)  => photo.addEventListener('click', (event) => onPicClick(event, index, photos.length)));
     btnForward.addEventListener('click', onForwardClick);
     btnBack.addEventListener('click', onBackwardClick);
+    btnOrder.addEventListener('click', onOrderBtnClick);
+
+    displayedPicTitle.innerText = selectedPic.dataset.service;
 
     const observer = new IntersectionObserver(enteries =>  {
         enteries.forEach((entery) => entery.isIntersecting && onPicIntersecting());
