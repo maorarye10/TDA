@@ -8,7 +8,7 @@ export const contact = (emailService) => {
         publicKey: publicKey,
     });
 
-    const onFormSubmit = (e) => {
+    const handleFormSubmit = (e) => {
         e.preventDefault();
         const templateParams = {
             user_name: textInputs[0].value,
@@ -24,5 +24,5 @@ export const contact = (emailService) => {
         });
     }
 
-    form.addEventListener('submit', onFormSubmit);
+    form.addEventListener('submit', handleFormSubmit);
 }

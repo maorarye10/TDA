@@ -128,6 +128,16 @@
   gap: var(--size-base);
 }
 
+.hero__link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.hero__link:hover {
+  color: var(--clr-gold);
+}
+
 .hero__contact-item {
   /* border: 1px solid greenyellow; */
   display: flex;

@@ -16,6 +16,7 @@ import "../styles/components/footer.css";
 import "../styles/components/lowerBackground.css";
 
 
+import { nav } from "./utils/nav";
 import { mobileNav } from "./utils/mobile-nav";
 import { header } from './utils/header'
 import { servicesNav } from "./utils/services-nav";
@@ -24,6 +25,8 @@ import { reviews } from "./utils/reviews";
 import emailJs from '@emailjs/browser';
 import { contact } from "./utils/contact";
 
+
+nav();
 mobileNav();
 //header();
 servicesNav();
