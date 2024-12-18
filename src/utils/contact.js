@@ -8,9 +8,17 @@ export const contact = (emailService) => {
         publicKey: publicKey,
     });
 
+    const validateForm = () => {
+        textInputs.forEach((input) => {
+            console.log(input.checkValidity());
+        });
+
+    }
+
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        const templateParams = {
+        validateForm();
+        /* const templateParams = {
             user_name: textInputs[0].value,
             service: selectInput.options[selectInput.selectedIndex].text,
             car_model: textInputs[1].value,
@@ -21,7 +29,7 @@ export const contact = (emailService) => {
         }, (error) => {
             console.log(error);
             alert("Failed to send email, check console for more info");
-        });
+        }); */
     }
 
     form.addEventListener('submit', handleFormSubmit);
