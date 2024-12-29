@@ -50,7 +50,8 @@ export const contact = (emailService) => {
             car_model: textInputs[1].value,
             user_phone: textInputs[2].value,
         };
-        emailService.send('service_h7g703f', 'template_q5pyhfg', templateParams).then(() => {
+        emailService.send('service_h7g703f', 'template_q5pyhfg', templateParams).then(() => {   
+            form.reset();
             alert("Success!");
         }, (error) => {
             console.log(error);

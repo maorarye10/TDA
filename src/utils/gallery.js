@@ -54,6 +54,8 @@ export const gallery = () => {
     const onOrderBtnClick = (event) => {
         event.preventDefault();
         serviceDDL.value = selectedPic.dataset.value;
+        const changeEvent = new Event('change');
+        serviceDDL.dispatchEvent(changeEvent);
         contactSection.scrollIntoView({behavior: "smooth", block: "center"});
     }
 
