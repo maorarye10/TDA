@@ -3,7 +3,7 @@ export const reviews = () => {
     const reviesVids = document.querySelectorAll('.reviews__video');
     let lastElementIndex = 0;
 
-    const observer = new IntersectionObserver (enteries => {
+    const mobileVidsObserver = new IntersectionObserver (enteries => {
         enteries.forEach((element) => {
             if (element.isIntersecting){
                 reviesVids[lastElementIndex].pause();
@@ -15,5 +15,5 @@ export const reviews = () => {
         });
     });
 
-    reviesVids.forEach(elem => observer.observe(elem));
+    reviesVids.forEach(elem => mobileVidsObserver.observe(elem));
 }
