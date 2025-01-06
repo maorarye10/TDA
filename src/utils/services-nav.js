@@ -29,5 +29,4 @@ export const servicesNav = () => {
     });
     
     document.querySelectorAll('.services__item-placeholder,.services__card').forEach(elem => observer.observe(elem));
-    document.querySelectorAll('.services__item-placeholder,.services__card').forEach(elem => console.log('Found one!'));
 }
