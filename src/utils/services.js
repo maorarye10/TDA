@@ -1,5 +1,7 @@
-export const servicesNav = () => {
+export const services = () => {
     const servicesNavPoints = document.querySelectorAll('.services__list-nav > li');
+    const serviceDDL = document.querySelector(".contact__select");
+    const contactSection = document.querySelector('.contact');
     let lastElementIndex = NaN;
 
     const observer = new IntersectionObserver(entries => {
@@ -27,6 +29,15 @@ export const servicesNav = () => {
             }
         });
     });
+
+    const onBtnClick = (serviceValue) => {
+        event.preventDefault();
+        serviceDDL.value = serviceValue;
+        const changeEvent = new Event('change');
+        serviceDDL.dispatchEvent(changeEvent);
+        contactSection.scrollIntoView({behavior: "smooth", block: "center"});
+    }
     
     document.querySelectorAll('.services__item-placeholder,.services__card').forEach(elem => observer.observe(elem));
+    document.querySelectorAll('.services__card-btn').forEach(card => card.addEventListener("click", () => onBtnClick(card.dataset.value)));
 }

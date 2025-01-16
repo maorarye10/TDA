@@ -19,7 +19,7 @@ import "../styles/components/lowerBackground.css";
 import { nav } from "./utils/nav";
 import { mobileNav } from "./utils/mobile-nav";
 import { header } from './utils/header'
-import { servicesNav } from "./utils/services-nav";
+import { services } from "./utils/services";
 import { gallery } from "./utils/gallery";
 import { reviews } from "./utils/reviews";
 import emailJs from '@emailjs/browser';
@@ -29,7 +29,7 @@ import { contact } from "./utils/contact";
 nav();
 mobileNav();
 //header();
-servicesNav();
+services();
 gallery();
 reviews();
 contact(emailJs);

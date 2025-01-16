@@ -36,7 +36,7 @@ export const gallery = () => {
             btnBack.disabled = false;
             btnBack.classList.remove('disable');
         }
-        pointer += 2;
+        pointer += 8;
         pics[pointer].scrollIntoView({behavior: "smooth", block: "nearest", inline: "start"});
         lastBtnPressed = 1;
     }
@@ -46,7 +46,7 @@ export const gallery = () => {
             btnForward.disabled = false;
             btnForward.classList.remove('disable');
         }
-        pointer -= 2;
+        pointer -= 8;
         pics[pointer].scrollIntoView({behavior: "smooth", block: "nearest", inline: "start"});
         lastBtnPressed = 0;
     }

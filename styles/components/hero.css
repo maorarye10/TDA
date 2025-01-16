@@ -242,6 +242,7 @@
   .hero__btn > svg {
     width: 13px;
     height: 13px;
+    transition: all 0.3s;
   }
 
   .hero__btn-title {
@@ -250,6 +251,15 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    transition: all 0.3s;
+  }
+
+  .hero__btn:hover > span {
+    color: white;
+  }
+
+  .hero__btn:hover > svg {
+    filter: hue-rotate(0deg) brightness(1000%) saturate(0%);
   }
 
   .hero__contact {

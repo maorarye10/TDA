@@ -231,6 +231,7 @@
     font-size: calc(var(--size-xxs) + 1.5px);
     line-height: 180%;
     transition: color 0.2s;
+    cursor: pointer;
   }
 
   .services__card-btn:hover {
