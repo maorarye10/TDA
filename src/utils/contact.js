@@ -36,6 +36,9 @@ export const contact = (emailService) => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
+        const submitBtn = document.querySelector(".contact__submit");
+        const submitBtnText = document.querySelector(".contact__submit > span");
+        const submitBtnSvg = document.querySelector(".contact__submit > img");
 
         isFormValid = true;
         validateForm();
@@ -44,18 +47,39 @@ export const contact = (emailService) => {
             return;
         }
 
+        submitBtn.disabled = true;
+        submitBtnText.textContent = "...שולח";
+        submitBtnSvg.style.display = "none";
+        submitBtn.classList.add("contact__submit-loading");
+
         const templateParams = {
             user_name: textInputs[0].value,
             service: selectInput.options[selectInput.selectedIndex].text,
             car_model: textInputs[1].value,
             user_phone: textInputs[2].value,
         };
+
         emailService.send('service_h7g703f', 'template_q5pyhfg', templateParams).then(() => {   
             form.reset();
-            alert("Success!");
+            submitBtn.classList.remove("contact__submit-loading");
+            submitBtn.classList.add("contact__submit-success");
+            submitBtnText.textContent = "!נשלח";
+            setTimeout(() => {
+                submitBtn.classList.remove("contact__submit-success");
+                submitBtn.disabled = false;
+                submitBtnText.textContent = "שלח פרטים";
+                submitBtnSvg.style.display = "block";
+            }, 3000);
         }, (error) => {
-            console.log(error);
-            alert("Failed to send email, check console for more info");
+            submitBtn.classList.remove("contact__submit-loading");
+            submitBtn.classList.add("contact__submit-error");
+            submitBtnText.textContent = "שגיאה";
+            setTimeout(() => {
+                submitBtn.classList.remove("contact__submit-error");
+                submitBtn.disabled = false;
+                submitBtnText.textContent = "שלח פרטים";
+                submitBtnSvg.style.display = "block";
+            }, 3000);
         });
     }
 

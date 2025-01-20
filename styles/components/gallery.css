@@ -14,7 +14,7 @@
 .gallery {
     /* border: 1px solid red; */
     position: relative;
-    height: 500px;
+    height: 560px;
     overflow: hidden;
     padding: var(--size-5xl) 0;
 }
@@ -64,7 +64,7 @@
 /* Change px units to variables */
 .gallery__photo-selected {
     width: 290px;
-    height: 230px;
+    height: 290px;
     border: double 5px transparent;
     border-radius: 8px;
     background-image: linear-gradient(#d7d7d7, #d7d7d7), linear-gradient(white, black 55%);
