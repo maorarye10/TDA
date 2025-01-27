@@ -1,6 +1,8 @@
 export const contact = (emailService) => {
     const form = document.querySelector(".contact__form");
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const textInputs = document.querySelectorAll('.contact__input');
     const selectInput = document.querySelector('.contact__select');
     let isFormValid = true;
@@ -59,7 +61,7 @@ export const contact = (emailService) => {
             user_phone: textInputs[2].value,
         };
 
-        emailService.send('service_h7g703f', 'template_q5pyhfg', templateParams).then(() => {   
+        emailService.send(serviceId, templateId, templateParams).then(() => {   
             form.reset();
             submitBtn.classList.remove("contact__submit-loading");
             submitBtn.classList.add("contact__submit-success");
