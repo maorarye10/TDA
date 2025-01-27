@@ -36,9 +36,18 @@ export const mobileNav = () => {
     }
   };
 
+  const handleLinkClick = (e) => {
+    e.preventDefault();
+    const linkElement = e.target;
+    const sectionName = linkElement.dataset.section;
+    const section = document.querySelector(`.${sectionName}`);
+    section.scrollIntoView({behavior: "smooth", block: "center"});
+    handleHideMobileNav();
+  };
+
   headerBarsBtn.addEventListener("click", handleOpenMobileNav);
   closeMobileNavBtn.addEventListener("click", handleHideMobileNav);
   mobileLinks.forEach((link) =>
-    link.addEventListener("click", handleHideMobileNav)
+    link.addEventListener("click", handleLinkClick)
   );
 };
