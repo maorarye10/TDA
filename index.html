@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="preload" href="/hero.png" as="image">
+    <!-- <link rel="preload" href="/hero.png" as="image"> -->
     <link rel="preload" href="/services.png" as="image">
     <title>TDA - הבית לרכב שלך</title>
   </head>
@@ -180,8 +180,9 @@
           fill="#272829"
         />
       </svg>
-      <video class="hero__background" autoplay muted loop>
-        <source src="/Videos/hero.mov">
+      <video class="hero__background" preload="auto" playsinline autoplay muted loop>
+        <source src="/Videos/webm/hero.webm" type='video/webm'>
+        <source src="/Videos/hevc/hero.mp4" type='video/mp4'>
       </video>
       <div class="hero__content">
         <span class="hero__brand-name">Tuning Detailing Accessories</span>
@@ -330,8 +331,9 @@
             שתעברו.
           </h2>
         </div>
-        <video class="info__video" controls>
-          <source src="/Videos/introduction.mp4" type="video/mp4">
+        <video class="info__video" preload="metadata" playsinline controls>
+          <source src="/Videos/webm/introduction.webm" type='video/webm'>
+          <source src="/Videos/hevc/introduction.mp4" type='video/mp4'>
         </video>
       </div>
     </section>
@@ -467,46 +469,56 @@
               </button>
             </div>
             <div class="reviews__list">
-              <video id="0" class="reviews__video" controls>
-                <source src="/Videos/review1.mov">
+              <video id="0" class="reviews__video" playsinline controls>
+                <source src="/Videos/webm/review1.webm" type="video/webm">
+                <source src="/Videos/hevc/review1.mp4" type="video/mp4">
               </video>
               
-              <video id="1" class="reviews__video" controls>
-                <source src="/Videos/review2.mov">
+              <video id="1" class="reviews__video" playsinline controls>
+                <source src="/Videos/webm/review2.webm" type="video/webm">
+                <source src="/Videos/hevc/review2.mp4" type="video/mp4">
               </video>
             
-              <video id="2" class="reviews__video" controls>
-                <source src="/Videos/review3.mov">
+              <video id="2" class="reviews__video" playsinline controls>
+                <source src="/Videos/webm/review3.webm" type="video/webm">
+                <source src="/Videos/hevc/review3.mp4" type="video/mp4">
               </video>
               
-              <video id="3" class="reviews__video" controls>
-                <source src="/Videos/review4.mov">
+              <video id="3" class="reviews__video" playsinline controls>
+                <source src="/Videos/webm/review4.webm" type="video/webm">
+                <source src="/Videos/hevc/review4.mp4" type="video/mp4">
               </video>
               
-              <video id="4" class="reviews__video" controls>
-                <source src="/Videos/review5.mov">
+              <video id="4" class="reviews__video" playsinline controls>
+                <source src="/Videos/webm/review5.webm" type="video/webm">
+                <source src="/Videos/hevc/review5.mp4" type="video/mp4">
               </video>
             </div>
           </div>
           <div class="reviews__desktop" alt="phone picture">
-            <video id="0" class="reviews__video-desktop" controls>
-              <source src="/Videos/review1.mov">
+            <video id="0" class="reviews__video-desktop" playsinline controls>
+              <source src="/Videos/webm/review1.webm" type="video/webm">
+              <source src="/Videos/hevc/review1.mp4" type="video/mp4">
             </video>
             
-            <video id="1" class="reviews__video-desktop" controls>
-              <source src="/Videos/review2.mov">
+            <video id="1" class="reviews__video-desktop" playsinline controls>
+              <source src="/Videos/webm/review2.webm" type="video/webm">
+              <source src="/Videos/hevc/review2.mp4" type="video/mp4">
             </video>
             
-            <video id="2" class="reviews__video-desktop" controls>
-              <source src="/Videos/review3.mov">
+            <video id="2" class="reviews__video-desktop" playsinline controls>
+              <source src="/Videos/webm/review3.webm" type="video/webm">
+              <source src="/Videos/hevc/review3.mp4" type="video/mp4">
             </video>
             
-            <video id="3" class="reviews__video-desktop" controls>
-              <source src="/Videos/review4.mov">
+            <video id="3" class="reviews__video-desktop" playsinline controls>
+              <source src="/Videos/webm/review4.webm" type="video/webm">
+              <source src="/Videos/hevc/review4.mp4" type="video/mp4">
             </video>
             
-            <video id="4" class="reviews__video-desktop" controls>
-              <source src="/Videos/review5.mov">
+            <video id="4" class="reviews__video-desktop" playsinline controls>
+              <source src="/Videos/webm/review5.webm" type="video/webm">
+              <source src="/Videos/hevc/review5.mp4" type="video/mp4">
             </video>
           </div>
         </section>
