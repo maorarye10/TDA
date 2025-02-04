@@ -28,7 +28,7 @@ import { contact } from "./utils/contact";
 
 nav();
 mobileNav();
-header();
+//header();
 services();
 gallery();
 reviews();

@@ -4,7 +4,6 @@ export const mobileNav = () => {
   const mobileNav = document.querySelector(".mobile-nav");
   const mobileMenuContainer = document.querySelector(".mobile-nav__container");
   const mobileLinks = document.querySelectorAll(".mobile-nav__link");
-  const header = document.querySelector(".header");
 
   let isMobileNavOpen = false;
 
@@ -15,11 +14,7 @@ export const mobileNav = () => {
 
       mobileNav.style.visibility = "visible";
       mobileNav.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
-      mobileNav.style.position = "sticky";
       mobileMenuContainer.style.left = "calc(15% / 2)";
-      
-      header.classList.remove("bring-to-view");
-      header.classList.add("hide-from-view");
 
       document.body.style.overflowY = "hidden";
       isMobileNavOpen = true;
@@ -33,11 +28,7 @@ export const mobileNav = () => {
 
       //mobileNav.style.visibility = "collapse";
       mobileNav.style.backgroundColor = "transparent";
-      mobileNav.style.position = "absolute";
       mobileMenuContainer.style.left = "-100%";
-      
-      header.classList.remove("hide-from-view");
-      header.classList.add("bring-to-view");
 
       setTimeout(() => (mobileNav.style.visibility = "collapse"), 300);
       document.body.style.overflowY = "auto";
