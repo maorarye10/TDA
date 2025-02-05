@@ -47,8 +47,6 @@
 }
 
 .reviews__video {
-    width: fit-content;
-    height: fit-content;
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
@@ -107,11 +105,6 @@
         border-radius: 23px;
         background-color: black;
         gap: 20px;
-    }
-
-    .reviews__video-desktop {
-        width: fit-content;
-        height: fit-content;
     }
     
     .reviews__list {
