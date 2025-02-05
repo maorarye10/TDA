@@ -19,6 +19,7 @@ import "../styles/components/lowerBackground.css";
 import { nav } from "./utils/nav";
 import { mobileNav } from "./utils/mobile-nav";
 import { header } from './utils/header'
+import { hero } from './utils/hero'
 import { services } from "./utils/services";
 import { gallery } from "./utils/gallery";
 import { reviews } from "./utils/reviews";
@@ -29,6 +30,7 @@ import { contact } from "./utils/contact";
 nav();
 mobileNav();
 //header();
+hero();
 services();
 gallery();
 reviews();

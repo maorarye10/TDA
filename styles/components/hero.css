@@ -147,6 +147,23 @@
   line-height: normal;
 }
 
+.hero__hidden-left {
+  /* filter: blur(20px); */
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.hero__show {
+  opacity: 1;
+  /* filter: blur(0); */
+  transform: translateX(0);
+  transition: all 2s;
+}
+
+.hero__delay-200 {
+  transition-delay: 400ms;
+}
+
 /* xs */
 /* @media screen and (min-width: 475px) {} */
 /* sm */
