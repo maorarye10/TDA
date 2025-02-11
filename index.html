@@ -195,10 +195,12 @@
           </h2>
         </div>
         <a
-          class="hero__btn hero__hidden-left hero__delay-400"
+          class="hero__btn hero__hidden-left"
           href="https://wa.me/972543332243?text=היי+אני+רוצה+להוסיף+לרכב+שלי+קצת+אופי+🏎%EF%B8%8F"
+          data-delay="600"
         >
           <svg
+          class="hero__btn-svg"
             xmlns="http://www.w3.org/2000/svg"
             width="26"
             height="25"
@@ -219,7 +221,7 @@
           </svg>
           <span class="hero__btn-title">להצעת מחיר</span>
         </a>
-        <div class="hero__contact">
+        <div class="hero__contact hero__hidden-right" data-delay="800">
           <a class="hero__link" href="tel:+972543332243" target="_blank">
             <div class="hero__contact-item">
               <span class="hero__contact-text">+972 54-333-2243</span>
@@ -290,8 +292,7 @@
     <section class="icon-bar container">
       <div class="icon-bar__items">
         <div class="icon-bar__item">
-          <img
-            class="icon-bar__img"
+          <img class="icon-bar__img"
             src="/SVG/spaceship.svg"
             alt="space-ship svg"
           />

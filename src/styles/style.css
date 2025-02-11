@@ -74,6 +74,7 @@ button {
 
 a {
   color: var(--clr-gold);
+  text-decoration: none;
 }
 
 strong {
