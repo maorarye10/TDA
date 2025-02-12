@@ -19,10 +19,11 @@
   position: absolute;
   left: calc(50% - calc(var(--size-3xl) / 2));
   top: -50%;
+  animation: jumpInfinite 1.5s infinite;
+  animation-delay: 2s;
 }
 
 .icon-bar__items {
-  /* border: 1px solid red; */
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -37,10 +38,32 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  transform: translateY(-100%);
+  filter: blur(20px);
+  opacity: 0;
 }
 
 .icon-bar__text {
   font-size: var(--size-xxs);
+}
+
+.icon-bar__show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(0);
+  transition: all 1s;
+}
+
+@keyframes jumpInfinite {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* md */
