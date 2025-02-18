@@ -42,6 +42,8 @@
   line-height: 100%;
   border-bottom: 1px solid;
   margin-bottom: var(--size-3xl);
+  filter: blur(20px);
+  opacity: 0;
 }
 
 .services__list {
@@ -71,7 +73,6 @@
 }
 
 .services__card {
-  /* border: 1px solid green; */
   background-color: #d7d7d7;
   border-radius: 21px;
   width: 293px;
@@ -84,6 +85,8 @@
   align-items: center;
   overflow: hidden;
   position: relative;
+  /* filter: blur(20px); */
+  opacity: 0;
 }
 
 .services__card-line {
@@ -100,16 +103,6 @@
   width: 66px;
   height: 66px;
   z-index: 1;
-  /* border: 7px solid transparent;
-  border-radius: 5rem;
-  border-image-source: linear-gradient(#116D38, #A3CC2E);
-  border-image-slice: 1; */
-  
-  /* enable when you want to add old border */
-  /* border: double 7px transparent;
-  border-radius: 80px;
-  background-origin: border-box;
-  background-clip: padding-box, border-box; */
 }
 
 .services__card-title {
@@ -171,6 +164,13 @@
   margin-top: var(--size-3xl);
   margin-bottom: calc(var(--size-base) + 1.5px);
   opacity: 50%;
+}
+
+.services__show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(0);
+  transition: all 1s;
 }
 
 /* md */

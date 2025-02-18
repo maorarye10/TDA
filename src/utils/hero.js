@@ -1,4 +1,5 @@
 export const hero = () => {
+    const svg = document.querySelector(".hero__svg");
     const titles = document.querySelector(".hero__titles");
     const btn = document.querySelector(".hero__btn");
     const contact = document.querySelector(".hero__contact");
@@ -20,6 +21,7 @@ export const hero = () => {
         });
     });
 
+    observer.observe(svg);
     observer.observe(titles);
     observer.observe(btn);
     observer.observe(contact);

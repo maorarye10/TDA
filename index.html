@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <!-- <link rel="preload" href="/hero.png" as="image"> -->
-    <link rel="preload" href="/services.png" as="image">
+    <!-- <link rel="preload" href="/services.png" as="image"> -->
     <title>TDA - הבית לרכב שלך</title>
   </head>
   <body>
@@ -21,7 +21,9 @@
       <div class="background__img"></div>
     </div> -->
 
-    <!-- Nav Bar -->
+    <!-- ~~~~~~~~~~~ -->
+    <!--   Nav Bar   -->
+    <!-- ~~~~~~~~~~~ -->
     <header class="container header">
       <div class="header__spacer"></div>
       <nav>
@@ -129,7 +131,9 @@
       </div>
     </header>
 
+    <!-- ~~~~~~~~~~ -->
     <!-- Mobile Nav -->
+    <!-- ~~~~~~~~~~ -->
     <div class="mobile-nav">
       <div class="mobile-nav__container">
         <svg
@@ -164,10 +168,11 @@
       </div>
     </div>
 
-    <!-- Hero -->
+    <!-- ~~~~~~~~ -->
+    <!--   Hero   -->
+    <!-- ~~~~~~~~ -->
     <section class="hero container">
-      <svg
-        class="hero__svg"
+      <svg class="hero__svg hero__hidden-left"
         xmlns="http://www.w3.org/2000/svg"
         width="960"
         height="946"
@@ -287,7 +292,9 @@
       </div>
     </section>
 
+    <!-- ~~~~~~~~ -->
     <!-- Icon Bar -->
+    <!-- ~~~~~~~~ -->
     <section class="icon-bar container">
       <div class="icon-bar__items">
         <div class="icon-bar__item">
@@ -316,7 +323,9 @@
       </div>
     </section>
 
-    <!-- Info -->
+    <!-- ~~~~~~~~ -->
+    <!--   Info   -->
+    <!-- ~~~~~~~~ -->
     <section id="info" class="info container">
       <!-- <img class="info__svg" src="/SVG/info.svg" alt="background svg" /> -->
       <div class="info__content" dir="rtl">
@@ -339,26 +348,29 @@
     </section>
 
     <div class="lowerBackground">
+
+      <!-- ~~~~~~~~ -->
       <!-- Services -->
+      <!-- ~~~~~~~~ -->
       <section id="services" class="services container">
         <h1 class="services__title">השירותים שלנו</h1>
         <div class="services__list">
           <div id="-1" class="services__item-placeholder"></div>
-          <div id="0" class="services__card">
+          <div id="0" class="services__card" data-delay="400">
             <div class="services__card-line background__yellow-purple"></div>
             <img class="services__card-img" src="/SVG/wheel1.svg" alt="wheel svg" />
             <h3 class="services__card-title">כיסויים אוניברסלים בתפירה</h3>
             <h4 class="services__card-summary">כיסויים אוניברלסים עם אפשרות להתאמה אישית, מוסיפים קלאס ושומרים על איכות ההגה</h4>
             <a class="services__card-btn" data-value="1">להזמנת כיסוי אוניברסלי</a>
           </div>
-          <div id="1" class="services__card">
+          <div id="1" class="services__card" data-delay="600">
             <div class="services__card-line background__lime-green"></div>
             <img class="services__card-img" src="/SVG/wheel2.svg" alt="wheel svg" />
             <h3 class="services__card-title">כיסויים תואם מקור בתפירה</h3>
             <h4 class="services__card-summary">כיסוי תואם מקור בהתאמה אישית לרכב, הכיסוי נבנה לפי בקשת הלקוח בהתאמה לעיצוב פנים הרכב ויושב כמו כיסוי מקורי שהגיע עם הרכב</h4>
             <a class="services__card-btn" data-value="2">להזמנת כיסוי תואם מקור</a>
           </div>
-          <div id="2" class="services__card">
+          <div id="2" class="services__card" data-delay="800">
             <div class="services__card-line background__blue-orange"></div>
             <img class="services__card-img" src="/SVG/wheel3.svg" alt="wheel svg" />
             <h3 class="services__card-title">מגנט ללוחית רישוי</h3>
@@ -374,8 +386,10 @@
         </ul>
         <div class="services__line"></div>
       </section>
-
-      <!-- Gallery -->
+      
+      <!-- ~~~~~~~~~~~ -->
+      <!--   Gallery   -->
+      <!-- ~~~~~~~~~~~ -->
       <section id="gallery" class="gallery container">
         <h1 class="gallery__title">גלרית עבודות</h1>
         <div class="gallery__content">
@@ -421,10 +435,14 @@
         </div>
       </section>
 
-      <!-- Contact Us and Reviews-->
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~ -->
+      <!-- Contact Us and Reviews -->
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~ -->
       <section class="contactAndReviews container" style="padding: 0;">
         
+        <!-- ~~~~~~~~~~ -->
         <!-- Contact Us -->
+        <!-- ~~~~~~~~~~ -->
         <section id="contact" class="contact container">
           <div class="contact__title-container">
             <h1 class="contact__title">צור קשר</h1>
@@ -448,7 +466,9 @@
           </form>
         </section>
 
-        <!-- Reviews -->
+      <!-- ~~~~~~~~~~~ -->
+      <!--   Reviews   -->
+      <!-- ~~~~~~~~~~~ -->
         <section class="reviews container">
           <div class="reviews__container">
             <h1 class="reviews__title">מה אומרים עלינו ?</h1>
@@ -526,7 +546,9 @@
       </section>
     </div>
 
-    <!-- Footer -->
+    <!-- ~~~~~~~~~~ -->
+    <!--   Footer   -->
+    <!-- ~~~~~~~~~~ -->
     <footer class="container footer">
       <img class="footer__logo" src="/SVG/logo.svg" alt="TDA Logo">
       <div class="footer__phone-container">
