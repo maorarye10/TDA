@@ -309,13 +309,13 @@
     padding: 0;
     height: calc(100vh - 72px);
     min-height: 516px;
-    max-height: 537px;
+    max-height: calc(calc(100vw * calc(9 / 16)) - 72px);
   }
 
   .hero__content {
-    min-height: 516px;
     height: 100%;
-    max-height: 537px;
+    min-height: 516px;
+    max-height: calc(calc(100vw * calc(9 / 16)) - 72px);
   }
 
   .hero__brand-name {
@@ -327,6 +327,7 @@
   .hero__titles {
     max-width: 284px;
     margin-left: 66px;
+    margin-left: calc(66px + clamp(0px, calc(calc(100vh - 89px) - 545px), 42px));
     gap: 40px;
   }
 
@@ -346,6 +347,7 @@
     padding: 0;
     padding: 3.5px 10px 3.5px 10px;
     margin-left: 133px;
+    margin-left: calc(133px + clamp(0px, calc(calc(100vh - 89px) - 545px), 41px));
     margin-top: 10px;
   }
 
@@ -387,14 +389,14 @@
   .hero {
     height: calc(100vh - 89px);
     min-height: 665px;
-    max-height: 690px;
+    max-height: calc(calc(100vw * calc(9 / 16)) - 89px);
   }
 
   .hero__content {
     height: 100%;
     min-height: 665px;
-    max-height: 690px;
-    padding-bottom: 60px;
+    max-height: none;
+    max-height: calc(calc(100vw * calc(9 / 16)) - 89px);
   }
 
   .hero__brand-name {
@@ -406,7 +408,7 @@
 
   .hero__titles {
     max-width: 450px;
-    margin-left: 70px;
+    margin-left: calc(70px + clamp(0px, calc(calc(100vh - 89px) - 700px), 50px)); /* 120 */
     margin-top: 61px;
     gap: 60px;
   }
@@ -426,7 +428,7 @@
     gap: 3px;
     padding: 0;
     padding: 6px 14px 6px 14px;
-    margin-left: 175px;
+    margin-left: calc(175px + clamp(0px, calc(calc(100vh - 89px) - 700px), 45px)); /* 220 */
   }
 
   .hero__btn-svg {
