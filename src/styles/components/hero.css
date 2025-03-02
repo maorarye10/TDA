@@ -389,14 +389,14 @@
   .hero {
     height: calc(100vh - 89px);
     min-height: 665px;
-    max-height: calc(calc(100vw * calc(9 / 16)) - 89px);
+    max-height: min(calc(calc(100vw * calc(9 / 16)) - 89px), 860px);
   }
 
   .hero__content {
     height: 100%;
     min-height: 665px;
     max-height: none;
-    max-height: calc(calc(100vw * calc(9 / 16)) - 89px);
+    max-height: min(calc(calc(100vw * calc(9 / 16)) - 89px), 860px);
   }
 
   .hero__brand-name {
@@ -408,7 +408,8 @@
 
   .hero__titles {
     max-width: 450px;
-    margin-left: calc(70px + clamp(0px, calc(calc(100vh - 89px) - 700px), 50px)); /* 120 */
+    /* margin-left: calc(70px + clamp(0px, calc(calc(100vh - 89px) - 665px), 100px)); */ /* 120 */
+    margin-left: calc(70px + clamp(0px, calc(calc(min(calc(100vh - 89px), min(calc(calc(100vw * calc(9 / 16)) - 89px), 860px)) - 665px) * calc(100 / 195)), 100px ));
     margin-top: 61px;
     gap: 60px;
   }
@@ -428,7 +429,8 @@
     gap: 3px;
     padding: 0;
     padding: 6px 14px 6px 14px;
-    margin-left: calc(175px + clamp(0px, calc(calc(100vh - 89px) - 700px), 45px)); /* 220 */
+    /* margin-left: calc(175px + clamp(0px, calc(calc(100vh - 89px) - 665px), 100px)); */ /* 220 */
+    margin-left: calc(175px + clamp(0px, calc(calc(min(calc(100vh - 89px), min(calc(calc(100vw * calc(9 / 16)) - 89px), 860px)) - 665px) * calc(100 / 195)), 100px ));
   }
 
   .hero__btn-svg {
