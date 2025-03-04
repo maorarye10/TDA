@@ -6,16 +6,18 @@ export const iconBar = () => {
     const observer = new IntersectionObserver(enteries =>  {
         enteries.forEach((entery) => {
             if (entery.isIntersecting){
-                console.log("intersecting");
                 icons.forEach((icon) => {
-                    const delay = icon.dataset.delay;
-                    if (!delay || delay === "" || delay === "0") {
+                    const style = window.getComputedStyle(icon);
+                    const transitionDelay = parseFloat(style.transitionDelay);
+                    const delayInMs = transitionDelay * 1000;
+                    icon.style.removeProperty("transition-delay");
+
+                    if (delayInMs === 0){
                         icon.classList.add("icon-bar__show");
                     } else {
-                        icon.classList.add(`delay-${delay}`);
                         setTimeout(() =>{
                             icon.classList.add("icon-bar__show");
-                        }, delay);
+                        }, delayInMs);
                     }
                 });
             }

@@ -12,7 +12,6 @@ export const hero = () => {
                     entery.target.classList.add("hero__show");
                 }
                 else {
-                    entery.target.classList.add(`delay-${delay}`);
                     setTimeout(() =>{
                         entery.target.classList.add("hero__show");
                     }, delay);

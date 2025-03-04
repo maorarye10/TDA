@@ -19,26 +19,6 @@
   padding-right: 0.5rem;
 }
 
-.delay-200 {
-  transition-delay: 200ms;
-}
-
-.delay-400 {
-  transition-delay: 400ms;
-}
-
-.delay-600 {
-  transition-delay: 600ms;
-}
-
-.delay-800 {
-  transition-delay: 800ms;
-}
-
-.delay-1000 {
-  transition-delay: 1s;
-}
-
 /* xl */
 @media screen and (min-width: 1440px) {
   body {

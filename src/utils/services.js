@@ -34,19 +34,20 @@ export const services = () => {
     const sectionObserver = new IntersectionObserver(entries => {
         entries.forEach((elem) => {
             if (elem.isIntersecting) {
-                // add the code to make the services visible
                 title.classList.add("services__show");
                 servicesCards.forEach((card) => {
-                    const delay = card.dataset.delay;
+                    const style = window.getComputedStyle(card);
+                    const transitionDelay = parseFloat(style.transitionDelay);
+                    const delayInMs = transitionDelay * 1000;
+                    card.style.removeProperty("transition-delay");
 
-                    if (!delay || delay === "" || delay === "0"){
+                    if (delayInMs === 0){
                         card.classList.add("services__show");
                     }
                     else {
-                        card.classList.add(`delay-${delay}`)
                         setTimeout(() => {
                             card.classList.add("services__show");
-                        }, delay);
+                        }, delayInMs);
                     }
                 });
             }

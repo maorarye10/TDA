@@ -43,7 +43,24 @@
   opacity: 0;
 }
 
+.icon-bar__item:nth-child(2) {
+  transition-delay: 150ms;
+}
+
+.icon-bar__item:nth-child(3) {
+  transition-delay: 300ms;
+}
+
+.icon-bar__item:nth-child(4) {
+  transition-delay: 450ms;
+}
+
+.icon-bar__img {
+  opacity: 0;
+}
+
 .icon-bar__text {
+  color: transparent;
   font-size: var(--size-xxs);
 }
 
@@ -52,6 +69,14 @@
   filter: blur(0);
   transform: translate(0);
   transition: all 1s;
+}
+
+.icon-bar__show > .icon-bar__img {
+  opacity: 1;
+}
+
+.icon-bar__show > .icon-bar__text {
+  color: var(--clr-white);
 }
 
 @keyframes jumpInfinite {
