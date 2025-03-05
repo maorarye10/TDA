@@ -1,4 +1,7 @@
 export const gallery = () => {
+    const gallerySection = document.querySelector('.gallery__content');
+    const title = document.querySelector('.gallery__title');
+    const displayedPicBlock = document.querySelector('.gallery__photo-selected-content');
     const displayedPic = document.querySelector('.gallery__photo-selected');
     let selectedPic = document.querySelector('.gallery__photo.selected-pic');
     const pics = document.querySelectorAll('.gallery__photo');
@@ -66,9 +69,26 @@ export const gallery = () => {
 
     displayedPicTitle.innerText = selectedPic.dataset.service;
 
-    const observer = new IntersectionObserver(enteries =>  {
+    const edgePicsObserver = new IntersectionObserver(enteries =>  {
         enteries.forEach((entery) => entery.isIntersecting && onPicIntersecting());
     });
-    observer.observe(pics[0]);
-    observer.observe( pics[pics.length - 1]);
+    edgePicsObserver.observe(pics[0]);
+    edgePicsObserver.observe( pics[pics.length - 1]);
+
+    const sectionObserver = new IntersectionObserver(enteries =>  {
+        enteries.forEach((entery) => {
+            if (entery.isIntersecting) {
+                title.classList.add("gallery__show");
+
+                const style = window.getComputedStyle(displayedPicBlock);
+                const transitionDelay = parseFloat(style.transitionDelay);
+                const delayInMs = transitionDelay * 1000;
+                displayedPicBlock.style.removeProperty("transition-delay");
+                setTimeout(() => {
+                    displayedPicBlock.classList.add("gallery__show");
+                }, delayInMs);
+            }
+        });
+    });
+    sectionObserver.observe(gallerySection);
 }

@@ -1,6 +1,5 @@
 .icon-bar {
   position: relative;
-  /* border: 1px solid red; */
   width: 100%;
   height: var(--size-5xl);
   background-color: var(--clr-cleanblack);
@@ -9,7 +8,6 @@
 }
 
 .icon-bar::before {
-  /* border: 1px solid red; */
   width: var(--size-3xl);
   height: 100%;
   background-image: url("/SVG/arrows.svg");
