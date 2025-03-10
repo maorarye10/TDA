@@ -1,9 +1,10 @@
-/* .reviews {
-    border: 1px solid yellow;
-} */
+.reviews {
+    margin-top: var(--size-5xl);
+    transform: translateX(-100%);
+    opacity: 0;
+}
 
 .reviews__container {
-    /* border: 1px solid red; */
     margin-top: 98px;
     display: flex;
     flex-direction: column;
@@ -76,6 +77,13 @@
 
 .reviews__desktop {
     display: none;
+}
+
+.contactAndReviews__show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0);
+    transition: all 1.2s;
 }
 
 /* md */

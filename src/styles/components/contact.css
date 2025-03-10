@@ -1,6 +1,7 @@
 .contact {
-    /* border: 1px solid red; */
     margin-top: var(--size-5xl);
+    transform: translateX(100%);
+    opacity: 0;
 }
 
 .contact__title-container {
@@ -140,6 +141,13 @@
     background-color: red;
     color: white;
     box-shadow: none;
+}
+
+.contactAndReviews__show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0);
+    transition: all 1.2s;
 }
 
 /* md */

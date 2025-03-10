@@ -23,6 +23,7 @@ import { hero } from './utils/hero'
 import { iconBar } from "./utils/iconBar";
 import { services } from "./utils/services";
 import { gallery } from "./utils/gallery";
+import { contactAndReviews } from "./utils/contactAndReviews";
 import { reviews } from "./utils/reviews";
 import emailJs from '@emailjs/browser';
 import { contact } from "./utils/contact";
@@ -34,6 +35,7 @@ mobileNav();
 hero();
 iconBar();
 services();
+contactAndReviews();
 gallery();
 reviews();
 contact(emailJs);

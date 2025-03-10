@@ -93,11 +93,13 @@ export const gallery = () => {
                 //show pics with delay
                 pics.forEach((pic, key) => {
                     const picTransitionDelay = delayInMs + (key + 1) * 50;
-                    console.log(picTransitionDelay);
                     pic.style.transitionDelay = `${picTransitionDelay}ms`;
                     setTimeout(() => {
-                        console.log(`showing pic with delay of ${picTransitionDelay}ms`);
                         pic.classList.add("gallery__show");
+                        setTimeout(() => {
+                            pic.style.removeProperty("transition-delay");
+                            pic.style.transition = "none";
+                        }, picTransitionDelay + 1000);
                     }, picTransitionDelay);
                 });
             }
