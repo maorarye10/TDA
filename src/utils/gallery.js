@@ -78,8 +78,10 @@ export const gallery = () => {
     const sectionObserver = new IntersectionObserver(enteries =>  {
         enteries.forEach((entery) => {
             if (entery.isIntersecting) {
+                //show title
                 title.classList.add("gallery__show");
 
+                //show displayed pic with delay
                 const style = window.getComputedStyle(displayedPicBlock);
                 const transitionDelay = parseFloat(style.transitionDelay);
                 const delayInMs = transitionDelay * 1000;
@@ -87,6 +89,17 @@ export const gallery = () => {
                 setTimeout(() => {
                     displayedPicBlock.classList.add("gallery__show");
                 }, delayInMs);
+
+                //show pics with delay
+                pics.forEach((pic, key) => {
+                    const picTransitionDelay = delayInMs + (key + 1) * 50;
+                    console.log(picTransitionDelay);
+                    pic.style.transitionDelay = `${picTransitionDelay}ms`;
+                    setTimeout(() => {
+                        console.log(`showing pic with delay of ${picTransitionDelay}ms`);
+                        pic.classList.add("gallery__show");
+                    }, picTransitionDelay);
+                });
             }
         });
     });

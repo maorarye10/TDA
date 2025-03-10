@@ -119,6 +119,8 @@
     object-fit: cover;
     border-radius: 10px;
     scroll-snap-align: center;
+    filter: blur(4px);
+    opacity: 0;
 }
 
 .gallery__photo-list::-webkit-scrollbar {
