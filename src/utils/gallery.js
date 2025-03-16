@@ -2,6 +2,7 @@ export const gallery = () => {
     const gallerySection = document.querySelector('.gallery__content');
     const title = document.querySelector('.gallery__title');
     const displayedPicBlock = document.querySelector('.gallery__photo-selected-content');
+    const displayedPicBlockOverlay = document.querySelector('.gallery__photo-info');
     const displayedPic = document.querySelector('.gallery__photo-selected');
     let selectedPic = document.querySelector('.gallery__photo.selected-pic');
     const pics = document.querySelectorAll('.gallery__photo');
@@ -62,10 +63,16 @@ export const gallery = () => {
         contactSection.scrollIntoView({behavior: "smooth", block: "center"});
     }
 
+    const onSelectedPicClick = (event) => {
+        event.preventDefault();
+        window.open(displayedPic.src);
+    }
+
     pics.forEach((photo, index, photos)  => photo.addEventListener('click', (event) => onPicClick(event, index, photos.length)));
     btnForward.addEventListener('click', onForwardClick);
     btnBack.addEventListener('click', onBackwardClick);
     btnOrder.addEventListener('click', onOrderBtnClick);
+    displayedPicBlockOverlay.addEventListener('click', onSelectedPicClick);
 
     displayedPicTitle.innerText = selectedPic.dataset.service;
 

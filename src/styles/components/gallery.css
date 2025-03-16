@@ -213,6 +213,7 @@
 
      /* Change px units to variables */
     .gallery__photo-info {
+        cursor: pointer;
         visibility: hidden;
         opacity: 0;
         padding: var(--size-xs);
@@ -323,6 +324,7 @@
 
      /* Change px units to variables */
     .gallery__photo-info {
+        cursor: pointer;
         padding: var(--size-base);
         border-radius: 5px;
     }
