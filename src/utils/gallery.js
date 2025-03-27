@@ -1,4 +1,7 @@
 export const gallery = () => {
+    const fullscreenSection = document.querySelector('.gallery__fullscreen');
+    const fullscreenCloseBtn = document.querySelector('.gallery__fullscreen-close');
+    const fullscreenImg = document.querySelector('.gallery__fullscreen-img');
     const gallerySection = document.querySelector('.gallery__content');
     const title = document.querySelector('.gallery__title');
     const displayedPicBlock = document.querySelector('.gallery__photo-selected-content');
@@ -65,14 +68,24 @@ export const gallery = () => {
 
     const onSelectedPicClick = (event) => {
         event.preventDefault();
-        window.open(displayedPic.src);
+        document.body.style.overflowY = "hidden";
+        fullscreenImg.src = selectedPic.src;
+        fullscreenSection.style.display = "block";
     }
 
+    const onFullscreenCloseClick = (event) => {
+        event.preventDefault();
+        document.body.style.overflowY = "auto";
+        fullscreenSection.style.display = "none";
+    }
+
+    
     pics.forEach((photo, index, photos)  => photo.addEventListener('click', (event) => onPicClick(event, index, photos.length)));
     btnForward.addEventListener('click', onForwardClick);
     btnBack.addEventListener('click', onBackwardClick);
     btnOrder.addEventListener('click', onOrderBtnClick);
     displayedPicBlockOverlay.addEventListener('click', onSelectedPicClick);
+    fullscreenCloseBtn.addEventListener('click', onFullscreenCloseClick);
 
     displayedPicTitle.innerText = selectedPic.dataset.service;
 

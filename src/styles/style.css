@@ -51,6 +51,7 @@ body {
   font-family: "Assistant", sans-serif;
   background-color: var(--clr-darkblack);
   color: var(--clr-softwhite);
+  position: relative;
 }
 
 img,
