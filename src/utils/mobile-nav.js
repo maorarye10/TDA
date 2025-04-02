@@ -4,17 +4,19 @@ export const mobileNav = () => {
   const mobileNav = document.querySelector(".mobile-nav");
   const mobileMenuContainer = document.querySelector(".mobile-nav__container");
   const mobileLinks = document.querySelectorAll(".mobile-nav__link");
+  const overlay = document.querySelector(".overlay");
 
   let isMobileNavOpen = false;
 
   const handleOpenMobileNav = () => {
-    if (!isMobileNavOpen) {
-      /* mobileNav.classList.add("mobile-nav-shown");
-      mobileMenuContainer.classList.add("mobile-nav__container-shown"); */
-
-      mobileNav.style.visibility = "visible";
-      mobileNav.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
-      mobileMenuContainer.style.left = "calc(15% / 2)";
+    if (!isMobileNavOpen) { 
+      overlay.style.display = "block";
+      mobileNav.style.display = "flex";
+      setTimeout(() => {
+        mobileNav.style.visibility = "visible";
+        mobileNav.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+        mobileMenuContainer.style.left = "calc(15% / 2)";
+      }, 0);
 
       document.body.style.overflowY = "hidden";
       isMobileNavOpen = true;
@@ -23,14 +25,14 @@ export const mobileNav = () => {
 
   const handleHideMobileNav = () => {
     if (isMobileNavOpen) {
-      /* mobileNav.classList.remove("mobile-nav-shown");
-      mobileMenuContainer.classList.remove("mobile-nav__container-shown"); */
-
-      //mobileNav.style.visibility = "collapse";
       mobileNav.style.backgroundColor = "transparent";
       mobileMenuContainer.style.left = "-100%";
 
-      setTimeout(() => (mobileNav.style.visibility = "collapse"), 300);
+      setTimeout(() => {
+        mobileNav.style.visibility = "collapse";
+        mobileNav.style.display = "none";
+        overlay.style.display = "none";
+      }, 300);
       document.body.style.overflowY = "auto";
       isMobileNavOpen = false;
     }

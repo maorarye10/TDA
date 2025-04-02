@@ -1,4 +1,5 @@
 export const gallery = () => {
+    const overlay = document.querySelector('.overlay');
     const fullscreenSection = document.querySelector('.gallery__fullscreen');
     const fullscreenCloseBtn = document.querySelector('.gallery__fullscreen-close');
     const fullscreenImg = document.querySelector('.gallery__fullscreen-img');
@@ -70,6 +71,7 @@ export const gallery = () => {
         event.preventDefault();
         document.body.style.overflowY = "hidden";
         fullscreenImg.src = selectedPic.src;
+        overlay.style.display = "block";
         fullscreenSection.style.display = "block";
     }
 
@@ -77,6 +79,7 @@ export const gallery = () => {
         event.preventDefault();
         document.body.style.overflowY = "auto";
         fullscreenSection.style.display = "none";
+        overlay.style.display = "none";
     }
 
     

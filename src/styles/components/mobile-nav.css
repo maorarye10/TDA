@@ -1,12 +1,11 @@
 .mobile-nav {
-  position: absolute;
+  position: sticky;
   /* border: 1px solid red; */
   left: 0;
   top: 0;
   width: 100%;
   height: 100dvh;
-  z-index: 999;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   visibility: collapse;

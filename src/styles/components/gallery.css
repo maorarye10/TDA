@@ -67,32 +67,24 @@
 
 .gallery__fullscreen{
     display: none;
-    outline: 1px solid red;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 998;
-    opacity: 1;
-    background-color: var(--clr-cleanblack);
-}
-
-.gallery__fullscreen-content {
     position: sticky;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
+}
+
+.gallery__fullscreen-content {
+    width: 100%;
+    height: 100%;
     padding: 0 10px;
-    opacity: 1;
-    z-index: 999;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
     overflow: hidden;
+    background-color: var(--clr-cleanblack);
 }
 
 .gallery__fullscreen-close {
@@ -115,6 +107,7 @@
     background-clip: content-box, border-box;
     object-fit: cover;
 }
+
 .gallery__photo-info {
     position: absolute;
     top: 0;
@@ -302,6 +295,33 @@
         height: 99px;
         border-radius: var(--size-xxxs);
         cursor: pointer;
+    }
+
+    .gallery__fullscreen{
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+        outline: 1px solid red;
+        padding: 0 50px;
+    }
+    
+    .gallery__fullscreen-content {
+        height: 75dvh;
+        padding: 0 15px;
+        padding-top: 15px;
+        padding-bottom: 50px;
+        justify-content: space-between;
+        gap: 0px;
+        background-color: var(--clr-cleanblack);
+    }
+    
+    .gallery__fullscreen-close {
+        align-self: self-end;
+    }
+    
+    .gallery__fullscreen-img {
+        width: 60dvh;
+        aspect-ratio: 1 / 1;
     }
 }
 /* lg */

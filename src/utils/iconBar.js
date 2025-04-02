@@ -1,7 +1,6 @@
 export const iconBar = () => {
     const icons = document.querySelectorAll(".icon-bar__item");
     const iconsContainer = document.querySelector(".icon-bar__items");
-    console.log(iconsContainer);
 
     const observer = new IntersectionObserver(enteries =>  {
         enteries.forEach((entery) => {

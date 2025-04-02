@@ -5,7 +5,6 @@ export const contactAndReviews = () => {
     const sectionObserver = new IntersectionObserver(entries => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                console.log('contactAndReviews is intersecting');
                 entry.target.classList.add('contactAndReviews__show');
             }
         });
