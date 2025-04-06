@@ -72,13 +72,13 @@ export const gallery = () => {
         document.body.style.overflowY = "hidden";
         fullscreenImg.src = selectedPic.src;
         overlay.style.display = "block";
-        fullscreenSection.style.display = "block";
+        fullscreenSection.style.visibility = "visible";
     }
 
     const onFullscreenCloseClick = (event) => {
         event.preventDefault();
         document.body.style.overflowY = "auto";
-        fullscreenSection.style.display = "none";
+        fullscreenSection.style.visibility = "hidden";
         overlay.style.display = "none";
     }
 

@@ -10,6 +10,7 @@
   align-items: center;
   visibility: collapse;
   transition: background-color 0.4s;
+  z-index: 999;
 }
 
 /* .mobile-nav-shown {
