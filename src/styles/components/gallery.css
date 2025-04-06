@@ -336,21 +336,6 @@
         padding: calc(var(--size-7xl) + 13px) 0 calc(var(--size-7xl) - 3px) 0;
     }
 
-    /* fix this diamond background */
-    /* .gallery::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-image: url("/SVG/diamond.svg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        top: 0;
-        left: 0;
-        z-index: -1;
-    } */
-
     .gallery__title {
         font-size: calc(var(--size-xl) + 2px);
     }
@@ -379,7 +364,6 @@
         width: 15px;
     }
 
-    /* Change px units to variables */
     .gallery__photo-selected {
         min-width: 280px;
         width: 280px;
@@ -387,7 +371,6 @@
         border-radius: 5px;
     }
 
-     /* Change px units to variables */
     .gallery__photo-info {
         cursor: pointer;
         padding: var(--size-base);
@@ -405,19 +388,51 @@
         font-size: var(--size-base);
     }
 
-    /* Change px units to variables */
     .gallery__photo-list {
         gap: var(--size-base);
         max-height: 280px;
         max-width: 580px;
     }
     
-    /* Change px units to variables */
     .gallery__photo {
         width: 132px;
         height: 132px;
         border-radius: calc(var(--size-xxxs) + 1px);
     }
+
+    /* ADJUST HERE TO 1024px */
+    .gallery__fullscreen{
+        display: flex !important; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 50px;
+        background-color: var(--clr-darkblack);
+    }
+    
+    .gallery__fullscreen-content {
+        height: 75dvh;
+        width: auto;
+        /* max-height: 800px;
+        max-width: 800px; */
+        padding: 15px 0 50px 0;
+        justify-content: space-between;
+        gap: 15px;
+        background-color: var(--clr-cleanblack);
+    }
+    
+    .gallery__fullscreen-close {
+        align-self: self-end;
+        margin-right: 15px;
+    }
+    
+    .gallery__fullscreen-img {
+        width: 60dvh;
+        aspect-ratio: 1 / 1;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    /* ENDS HERE */
 }
 /* xl */
 @media screen and (min-width: 1440px) {
