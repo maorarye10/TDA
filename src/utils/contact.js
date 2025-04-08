@@ -15,11 +15,14 @@ export const contact = (emailService) => {
     }
 
     const isSelectInputValid = (input) => {
+        const errLbl = document.querySelector(`label[for="${input.id}"]`);
         if(input.selectedIndex !== 0){
             selectInput.classList.remove("contact__input-invalid");
+            errLbl.style.display = "none";
             return true;
         }
         selectInput.classList.add("contact__input-invalid");
+        errLbl.style.display = "block";
         return false;
     }
 
@@ -87,6 +90,8 @@ export const contact = (emailService) => {
 
     const handleInvalidInput = (e) => {
         e.target.classList.add("contact__input-invalid");
+        const errLbl = document.querySelector(`label[for="${e.target.id}"]`);
+        errLbl.style.display = "block";
     }
 
     const handleTextInputChange = (e) => {
@@ -98,6 +103,8 @@ export const contact = (emailService) => {
 
         if (isInputValid){
             e.target.classList.remove("contact__input-invalid");
+            const errLbl = document.querySelector(`label[for="${e.target.id}"]`);
+            errLbl.style.display = "none";
         }
     }
 

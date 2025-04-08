@@ -458,17 +458,33 @@
             <h1 class="contact__title">צור קשר</h1>
           </div>
           <form class="contact__form" novalidate>
-            <input required class="contact__input" type="text" placeholder="שם מלא" dir="rtl">
-            <div class="contact__select-wraper">
-              <select required class="contact__select" name="type" id="type" dir="rtl">
-                <option hidden value="0">סוג שירות</option>
-                <option value="1">כיסוי אוניברסלי</option>
-                <option value="2">כיסוי תואם מקור</option>
-                <option value="3">מגנט ללוחית רישוי</option>
-              </select>
+            <div class="contact__input-wrapper" dir="rtl">
+              <input id="name" required class="contact__input" type="text" placeholder="שם מלא" dir="rtl">
+              <label for="name" dir="rtl">* שדה חובה - נא למלא שם</label>
             </div>
-            <input required class="contact__input" type="text" placeholder="סוג רכב" dir="rtl">
-            <input required class="contact__input" type="tel" placeholder="מספר טלפון" dir="rtl" pattern="^0?(([23489]{1}[0-9]{7})|[57]{1}[0-9]{8})+$">
+            
+            <div class="contact__input-wrapper" dir="rtl">
+              <div class="contact__select-wraper">
+                <select required class="contact__select" name="type" id="type" dir="rtl">
+                  <option hidden value="0">סוג שירות</option>
+                  <option value="1">כיסוי אוניברסלי</option>
+                  <option value="2">כיסוי תואם מקור</option>
+                  <option value="3">מגנט ללוחית רישוי</option>
+                </select>
+              </div>
+              <label for="type" dir="rtl">* שדה חובה - נא לבחור שירות רצוי</label>
+            </div>
+
+            <div class="contact__input-wrapper" dir="rtl">
+              <input id="car" required class="contact__input" type="text" placeholder="סוג רכב" dir="rtl">
+              <label for="car" dir="rtl">* שדה חובה - נא למלא סוג רכב</label>
+            </div>
+            
+            <div class="contact__input-wrapper" dir="rtl">
+              <input id="phone" required class="contact__input" type="tel" placeholder="מספר טלפון" dir="rtl" pattern="^0?(([23489]{1}[0-9]{7})|[57]{1}[0-9]{8})+$">
+              <label for="phone" dir="rtl">* שדה חובה - נא למלא מספר טלפון תקין</label>
+            </div>
+            
             <button class="contact__submit" type="submit">
               <img src="/SVG/arrow_send.svg" alt="send form svg">
               <span>שלח פרטים</span>
