@@ -30,8 +30,8 @@
 }
 
 .info__video {
-  /* border: 1px solid red; */
   min-width: 343.5px;
+  background-color: black;
 }
 
 /* md */

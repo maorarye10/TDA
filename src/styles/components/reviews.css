@@ -35,6 +35,7 @@
 .reviews__list {
     width: 215.5px;
     border-radius: 10px;
+    background-color: black;
     margin-top: 5px;
     display: flex;
     overflow: scroll;

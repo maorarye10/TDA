@@ -1,4 +1,5 @@
 export const services = () => {
+    const hiddenBackground = document.querySelector('.services__hidden');
     const servicesNavPoints = document.querySelectorAll('.services__list-nav > li');
     const serviceDDL = document.querySelector(".contact__select");
     const contactSection = document.querySelector('.contact');
@@ -55,17 +56,31 @@ export const services = () => {
     });
                 
 
-    const onBtnClick = (serviceValue) => {
+    const onBtnClick = (event, serviceValue) => {
         event.preventDefault();
         serviceDDL.value = serviceValue;
         const changeEvent = new Event('change');
         serviceDDL.dispatchEvent(changeEvent);
         contactSection.scrollIntoView({behavior: "smooth", block: "center"});
     }
+
+    const onBackgroundImgLoad = () => {
+        const currBkgrndImg = getComputedStyle(cardsSection).backgroundImage;
+        if (currBkgrndImg !== '' && currBkgrndImg !== 'none') {
+            cardsSection.style.backgroundImage = `url(${hiddenBackground.src})`;
+            hiddenBackground.remove();
+        }
+    }
     
     //document.querySelectorAll('.services__item-placeholder,.services__card').forEach(elem => cardsObserver.observe(elem));
     servicesCards.forEach(card => cardsObserver.observe(card));
     cardPlaceholders.forEach(placeholder => cardsObserver.observe(placeholder));
-    document.querySelectorAll('.services__card-btn').forEach(card => card.addEventListener("click", () => onBtnClick(card.dataset.value)));
-    sectionObserver.observe(cardsSection);
+    document.querySelectorAll('.services__card-btn').forEach(card => card.addEventListener("click", (event) => onBtnClick(event, card.dataset.value)));
+    sectionObserver.observe(cardsSection); 
+
+    if (hiddenBackground.complete) {
+        onBackgroundImgLoad();
+    } else {
+        hiddenBackground.addEventListener("load", onBackgroundImgLoad);
+    }
 }

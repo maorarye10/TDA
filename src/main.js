@@ -28,6 +28,12 @@ import { reviews } from "./utils/reviews";
 import emailJs from '@emailjs/browser';
 import { contact } from "./utils/contact";
 
+const body = document.querySelector("body");
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    body.style.display = "block";
+});
+
 
 nav();
 mobileNav();
