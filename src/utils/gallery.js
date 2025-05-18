@@ -3,6 +3,7 @@ export const gallery = () => {
     const fullscreenSection = document.querySelector('.gallery__fullscreen');
     const fullscreenCloseBtn = document.querySelector('.gallery__fullscreen-close');
     const fullscreenImg = document.querySelector('.gallery__fullscreen-img');
+    const fullscreenLoader = document.querySelector('.gallery__fullscreen-loader');
     const gallerySection = document.querySelector('.gallery__content');
     const title = document.querySelector('.gallery__title');
     const displayedPicBlock = document.querySelector('.gallery__photo-selected-content');
@@ -19,19 +20,21 @@ export const gallery = () => {
     let pointer = 0;
     let lastBtnPressed = 0; // 0 = backward, 1 = forward
 
-    const onPicClick = (event, index, arrLength) => {
+    const onPicClick = (event) => {
         const clickedPic = event.target;
-        selectedPic.classList.remove("selected-pic");
-        clickedPic.classList.add("selected-pic");
-        displayedPic.src = clickedPic.src;
-        displayedPicTitle.innerText = clickedPic.dataset.service;
-        selectedPic = clickedPic;
+        const clickedPicContainer = clickedPic.parentNode;
 
-        /* if (index > 0 && index < arrLength - 1) {
-            clickedPic.scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"});
-        } else {
-            clickedPic.scrollIntoView({behavior: "smooth", block: "nearest", inline: "end"});
-        } */
+        selectedPic.classList.remove("selected-pic");
+        clickedPicContainer.classList.add("selected-pic");
+
+        displayedPic.src = clickedPic.src;
+        displayedPicTitle.innerText = clickedPicContainer.dataset.service;
+        displayedPicBlock.style.backgroundImage = getComputedStyle(clickedPicContainer).backgroundImage;
+        if (!displayedPic.complete) { 
+            displayedPic.style.opacity = 0;
+        }
+
+        selectedPic = clickedPicContainer;
     }
 
     const onPicIntersecting = () => {
@@ -71,7 +74,13 @@ export const gallery = () => {
     const onSelectedPicClick = (event) => {
         event.preventDefault();
         document.body.style.overflowY = "hidden";
-        fullscreenImg.src = selectedPic.src;
+        fullscreenImg.src = `/Pictures/full/wheel${selectedPic.dataset.index}-full.webp`;
+
+        if (!fullscreenImg.complete) {
+            console.log("IS Img Loaded: ", fullscreenImg.complete);
+            fullscreenImg.style.visibility = "hidden";
+            fullscreenLoader.style.visibility = "visible";
+        }
         overlay.style.display = "block";
         fullscreenSection.style.visibility = "visible";
     }
@@ -81,15 +90,52 @@ export const gallery = () => {
         document.body.style.overflowY = "auto";
         fullscreenSection.style.visibility = "hidden";
         overlay.style.display = "none";
+        fullscreenImg.style.visibility = "hidden";
+        fullscreenLoader.style.visibility = "visible";
+    }
+
+    const onFullscreenImgLoaded = () => { 
+        fullscreenImg.style.visibility = "visible";
+        fullscreenLoader.style.visibility = "hidden";
     }
 
     
-    pics.forEach((photo, index, photos)  => photo.addEventListener('click', (event) => onPicClick(event, index, photos.length)));
+    pics.forEach((pic, index)  => {
+        const photo = pic.querySelector('img');
+
+        // Click event for each pic
+        photo.addEventListener('click', (event) => onPicClick(event));
+
+        // Background image loading
+        pic.style.backgroundImage = `url(/Pictures/small/wheel${index + 1}-small.webp)`;
+
+        const onImgLoaded = (event) => {
+            const photo = event.target;
+            photo.style.opacity = 1;
+        }
+
+        if (index === 0) { 
+            displayedPicBlock.style.backgroundImage = `url(/Pictures/small/wheel${index + 1}-small.webp)`;
+            displayedPic.style.opacity = 0;
+            
+            displayedPic.addEventListener('load', onImgLoaded);
+        }
+
+        if (photo.complete) {
+            const event = {
+                target: photo
+            }
+            onImgLoaded(event);
+        } else {
+            photo.addEventListener('load', onImgLoaded);
+        }
+    });
     btnForward.addEventListener('click', onForwardClick);
     btnBack.addEventListener('click', onBackwardClick);
     btnOrder.addEventListener('click', onOrderBtnClick);
     displayedPicBlockOverlay.addEventListener('click', onSelectedPicClick);
     fullscreenCloseBtn.addEventListener('click', onFullscreenCloseClick);
+    fullscreenImg.addEventListener('load', onFullscreenImgLoaded);
 
     displayedPicTitle.innerText = selectedPic.dataset.service;
 

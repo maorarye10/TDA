@@ -64,6 +64,7 @@
             <img src="/SVG/close_btn.svg" alt="Close button">
           </button>
           <img class="gallery__fullscreen-img" src="/Pictures/wheel1.jpg" alt="gallery photo" loading="lazy" />
+          <span class="gallery__fullscreen-loader"></span>
         </div>
       </div>
       
@@ -337,7 +338,6 @@
     <!--   Info   -->
     <!-- ~~~~~~~~ -->
     <section id="info" class="info container">
-      <!-- <img class="info__svg" src="/SVG/info.svg" alt="background svg" /> -->
       <div class="info__content" dir="rtl">
         <h1 class="info__title">אנחנו לא מוסך !</h1>
         <div class="info__subtitle">
@@ -397,7 +397,7 @@
         </ul>
         <div class="services__line"></div>
       </section>
-      
+
       <!-- ~~~~~~~~~~~ -->
       <!--   Gallery   -->
       <!-- ~~~~~~~~~~~ -->
@@ -415,35 +415,82 @@
             </div>
           </div>
           <div class="gallery__photo-list">
-            <img class="gallery__photo selected-pic" src="/Pictures/wheel1.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel2.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel3.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel4.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel5.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel6.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel7.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel8.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel9.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel10.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel11.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel12.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel13.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel14.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel15.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel16.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel17.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel18.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel19.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel20.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel21.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel22.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel23.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-            <img class="gallery__photo" src="/Pictures/wheel24.webp" data-service="כיסוי תואם מקור" data-value="2" alt="gallery photo" loading="lazy" />
-          </div>
-          <button class="gallery__btn-right">
-            <img class="gallery__btn-right-img" src="/SVG/arrow_right.svg" alt="arrow left svg" />
-          </button>
+            <div class="gallery__photo selected-pic" data-index="1" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel1.webp" alt="gallery photo" loading="lazy" />
+            </div>
+            <div class="gallery__photo" data-index="2" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel2.webp" alt="gallery photo" loading="lazy" />
+            </div>
+            <div class="gallery__photo" data-index="3" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel3.webp" alt="gallery photo" loading="lazy" />
+            </div>
+            <div class="gallery__photo" data-index="4" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel4.webp" alt="gallery photo" loading="lazy" />
+            </div>
+            <div class="gallery__photo" data-index="5" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel5.webp" alt="gallery photo" loading="lazy" />
+            </div>
+            <div class="gallery__photo" data-index="6" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel6.webp" alt="gallery photo" loading="lazy" />
+            </div>
+            <div class="gallery__photo" data-index="7" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel7.webp" alt="gallery photo" loading="lazy" />
+            </div>
+            <div class="gallery__photo" data-index="8" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel8.webp" alt="gallery photo" loading="lazy" />
+            </div>
+            <div class="gallery__photo" data-index="9" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel9.webp" alt="gallery photo" loading="lazy" />
+            </div>
+            <div class="gallery__photo" data-index="10" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel10.webp" alt="gallery photo" loading="lazy"/>
+            </div>
+            <div class="gallery__photo" data-index="11" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel11.webp" alt="gallery photo" loading="lazy"/>
+            </div>
+            <div class="gallery__photo" data-index="12" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel12.webp" alt="gallery photo" loading="lazy"/>
+            </div>
+            <div class="gallery__photo" data-index="13" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel13.webp" alt="gallery photo" loading="lazy"/>
+            </div>
+            <div class="gallery__photo" data-index="14" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel14.webp" alt="gallery photo" loading="lazy"/>
+            </div>
+            <div class="gallery__photo" data-index="15" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel15.webp" alt="gallery photo" loading="lazy"/>
+            </div>
+            <div class="gallery__photo" data-index="16" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel16.webp" alt="gallery photo" loading="lazy"/>
+            </div>
+            <div class="gallery__photo" data-index="17" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel17.webp" alt="gallery photo" loading="lazy"/>
+            </div>
+            <div class="gallery__photo" data-index="18" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel18.webp" alt="gallery photo" loading="lazy"/>
+            </div>
+            <div class="gallery__photo" data-index="19" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel19.webp" alt="gallery photo" loading="lazy"/>
+            </div>
+            <div class="gallery__photo" data-index="20" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel20.webp" alt="gallery photo" loading="lazy"/>
+            </div>
+            <div class="gallery__photo" data-index="21" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel21.webp" alt="gallery photo" loading="lazy"/>
+            </div>
+            <div class="gallery__photo" data-index="22" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel22.webp" alt="gallery photo" loading="lazy"/>
+            </div>
+            <div class="gallery__photo" data-index="23" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel23.webp" alt="gallery photo" loading="lazy"/>
+            </div>
+            <div class="gallery__photo" data-index="24" data-service="כיסוי תואם מקור" data-value="2">
+              <img src="/Pictures/wheel24.webp" alt="gallery photo" loading="lazy"/>
+            </div>
         </div>
+        <button class="gallery__btn-right">
+          <img class="gallery__btn-right-img" src="/SVG/arrow_right.svg" alt="arrow left svg" />
+        </button>
       </section>
 
       <!-- ~~~~~~~~~~~~~~~~~~~~~~ -->
